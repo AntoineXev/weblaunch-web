@@ -1,0 +1,379 @@
+@import "/mixins/spacing";
+
+.no-margin {
+  @include margin-spacing('no')
+}
+
+.no-margin-right {
+  @include margin-spacing('no', 'right')
+}
+
+.no-margin-top {
+  @include margin-spacing('no', 'top')
+}
+.no-margin-bottom {
+  @include margin-spacing('no', 'bottom')
+}
+
+.no-margin-vertical {
+  @include margin-spacing('no', 'vertical')
+}
+
+.no-margin-horizontal {
+  @include margin-spacing('no', 'horizontal')
+
+}
+
+.margin-base {
+  @include margin-spacing('base')
+}
+
+.margin-base-top {
+  @include margin-spacing('base', 'top')
+}
+
+.margin-base-right {
+  @include margin-spacing('base', 'right')
+}
+
+.margin-base-left {
+  @include margin-spacing('base', 'left')
+}
+
+.margin-base-bottom {
+  @include margin-spacing('base', 'bottom')
+}
+
+.margin-base-vertical {
+  @include margin-spacing('base', 'vertical')
+
+}
+
+.margin-base-horizontal {
+  @include margin-spacing('base', 'horizontal')
+
+}
+
+.margin-small {
+  @include margin-spacing('small')
+}
+
+.margin-small-top {
+  @include margin-spacing('small', 'top')
+}
+
+.margin-small-right {
+  @include margin-spacing('small', 'right')
+}
+
+.margin-small-left {
+  @include margin-spacing('small', 'left')
+}
+
+.margin-small-bottom {
+  @include margin-spacing('small', 'bottom')
+}
+
+.margin-small-vertical {
+  @include margin-spacing('small', 'vertical')
+
+}
+
+.margin-small-horizontal {
+  @include margin-spacing('small', 'horizontal')
+
+}
+
+.margin-medium {
+  @include margin-spacing('medium')
+}
+
+.margin-medium-top {
+  @include margin-spacing('medium', 'top')
+}
+
+.margin-medium-right {
+  @include margin-spacing('medium', 'right')
+}
+
+.margin-medium-left {
+  @include margin-spacing('medium', 'left')
+}
+
+.margin-medium-bottom {
+  @include margin-spacing('medium', 'bottom')
+}
+
+.margin-medium-vertical {
+  @include margin-spacing('medium', 'vertical')
+
+}
+
+.margin-medium-horizontal {
+  @include margin-spacing('medium', 'horizontal')
+
+}
+
+.margin-auto {
+  @include margin-spacing('auto')
+}
+
+.margin-auto-left {
+  @include margin-spacing('auto', 'left')
+}
+
+.margin-auto-right {
+  @include margin-spacing('auto', 'right')
+}
+
+.margin-auto-top {
+  @include margin-spacing('auto', 'top')
+}
+
+.margin-auto-bottom {
+  @include margin-spacing('auto', 'bottom')
+}
+
+.margin-auto-horizontal {
+  @include margin-spacing('auto', 'horizontal')
+
+}
+
+.margin-auto-vertical {
+  @include margin-spacing('auto', 'vertical')
+}
+
+.margin-large {
+  @include margin-spacing('large')
+}
+
+.margin-large-top {
+  @include margin-spacing('large', 'top')
+}
+
+.margin-large-left {
+  @include margin-spacing('large', 'left')
+}
+
+.margin-large-right {
+  @include margin-spacing('large', 'right')
+}
+
+.margin-large-vertical {
+  @include margin-spacing('large', 'vertical')
+
+}
+
+.margin-large-horizontal {
+  @include margin-spacing('large', 'horizontal')
+
+}
+
+.margin-large-bottom {
+  @include margin-spacing('large', 'bottom')
+}
+
+.margin-xlarge {
+  @include margin-spacing('xlarge')
+}
+
+.margin-xlarge-top {
+  @include margin-spacing('xlarge', 'top')
+}
+
+.margin-xlarge-left {
+  @include margin-spacing('xlarge', 'left')
+}
+
+.margin-xlarge-right {
+  @include margin-spacing('xlarge', 'right')
+}
+
+.margin-xlarge-vertical {
+  @include margin-spacing('xlarge', 'vertical')
+
+}
+
+.margin-xlarge-horizontal {
+  @include margin-spacing('xlarge', 'horizontal')
+
+}
+
+.margin-xlarge-bottom {
+  @include margin-spacing('xlarge', 'bottom')
+}
+
+.no-padding {
+  @include padding-spacing('no')
+}
+
+.no-padding-right {
+  @include padding-spacing('no', 'right')
+}
+
+.no-padding-vertical {
+  @include padding-spacing('no', 'vertical')
+}
+
+.no-padding-horizontal {
+  @include padding-spacing('no', 'horizontal')
+
+}
+
+.no-padding-bottom {
+  @include padding-spacing('no', 'bottom')
+}
+
+.padding-base {
+  @include padding-spacing('base')
+}
+
+.padding-base-top {
+  @include padding-spacing('base', 'top')
+}
+
+.padding-base-right {
+  @include padding-spacing('base', 'right')
+}
+
+.padding-base-left {
+  @include padding-spacing('base', 'left')
+}
+
+.padding-base-bottom {
+  @include padding-spacing('base', 'bottom')
+}
+
+.padding-base-vertical {
+  @include padding-spacing('base', 'vertical')
+}
+
+.padding-base-horizontal {
+  @include padding-spacing('base', 'horizontal')
+}
+.padding-small {
+  @include padding-spacing('small')
+}
+
+.padding-small-top {
+  @include padding-spacing('small', 'top')
+}
+
+.padding-small-right {
+  @include padding-spacing('small', 'right')
+}
+
+.padding-small-left {
+  @include padding-spacing('small', 'left')
+}
+
+.padding-small-bottom {
+  @include padding-spacing('small', 'bottom')
+}
+
+.padding-small-vertical {
+  @include padding-spacing('small', 'vertical')
+}
+
+.padding-small-horizontal {
+  @include padding-spacing('small', 'horizontal')
+}
+
+.padding-medium {
+  @include padding-spacing('medium')
+}
+
+.padding-medium-top {
+  @include padding-spacing('medium', 'top')
+}
+
+.padding-medium-right {
+  @include padding-spacing('medium', 'right')
+}
+
+.padding-medium-left {
+  @include padding-spacing('medium', 'left')
+}
+
+.padding-medium-bottom {
+  @include padding-spacing('medium', 'bottom')
+}
+
+.padding-medium-vertical {
+  @include padding-spacing('medium', 'vertical')
+
+}
+
+.padding-medium-horizontal {
+  @include padding-spacing('medium', 'horizontal')
+
+}
+
+.padding-large {
+  @include padding-spacing('large')
+}
+
+.padding-large-top {
+  @include padding-spacing('large', 'top')
+}
+
+.padding-large-left {
+  @include padding-spacing('large', 'left')
+}
+
+.padding-large-right {
+  @include padding-spacing('large', 'right')
+}
+
+.padding-large-vertical {
+  @include padding-spacing('large', 'vertical')
+
+}
+
+.padding-large-horizontal {
+  @include padding-spacing('large', 'horizontal')
+
+}
+
+.padding-large-bottom {
+  @include padding-spacing('large', 'bottom')
+}
+
+.padding-xlarge {
+  @include padding-spacing('xlarge')
+}
+
+.padding-xlarge-top {
+  @include padding-spacing('xlarge', 'top')
+}
+
+.padding-xlarge-left {
+  @include padding-spacing('xlarge', 'left')
+}
+
+.padding-xlarge-right {
+  @include padding-spacing('xlarge', 'right')
+}
+
+.padding-xlarge-vertical {
+  @include padding-spacing('xlarge', 'vertical')
+
+}
+
+.padding-xlarge-horizontal {
+  @include padding-spacing('xlarge', 'horizontal')
+
+}
+
+.padding-xlarge-bottom {
+  @include padding-spacing('xlarge', 'bottom')
+}
+
+
+.fit-content {
+  width: fit-content;
+}
+
+.full-width {
+  width: 100%;
+}

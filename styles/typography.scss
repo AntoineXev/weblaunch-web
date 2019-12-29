@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:600,700|Poppins:400,700&display=swap');
+@import "variables";
+
+h1 {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-family: "Hind Siliguri";
+  color: $title-base-color;
+}
+
+a {
+  color: $primary;
+  :hover {
+    color: $accent;
+  }
+}

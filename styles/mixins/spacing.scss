@@ -1,0 +1,59 @@
+@function getSizeValue($size) {
+  $return-value: auto;
+  @if $size == 'no' {
+    $return-value: $no-spacing;
+  } @else if $size == 'small' {
+    $return-value: $spacing-small;
+  } @else if $size == 'base' {
+    $return-value: $spacing-base;
+  } @else if $size == 'large' {
+    $return-value: $spacing-x-large;
+  } @else if $size == 'xlarge' {
+    $return-value: $spacing-xx-large;
+  } @else if $size == 'medium' {
+    $return-value: $spacing-medium;
+  }
+  @return $return-value;
+}
+
+// Margins
+
+@mixin margin-spacing($margin-size, $orientation: 'all') {
+  @if $orientation == 'right' {
+    margin-right: getSizeValue($margin-size);
+  } @else if $orientation == 'left' {
+    margin-left: getSizeValue($margin-size);
+  } @else if $orientation == 'horizontal' {
+    margin-right: getSizeValue($margin-size);
+    margin-left: getSizeValue($margin-size);
+  } @else if $orientation == 'vertical' {
+    margin-top: getSizeValue($margin-size);
+    margin-bottom: getSizeValue($margin-size);
+  } @else if $orientation == 'top' {
+    margin-top: getSizeValue($margin-size);
+  } @else if $orientation == 'bottom' {
+    margin-bottom: getSizeValue($margin-size);
+  } @else {
+    margin: getSizeValue($margin-size);
+  }
+}
+
+@mixin padding-spacing($padding-size, $direction: 'all') {
+  @if $direction == 'right' {
+    padding-right: getSizeValue($padding-size);
+  } @else if $direction == 'left' {
+    padding-left: getSizeValue($padding-size);
+  } @else if $direction == 'horizontal' {
+    padding-right: getSizeValue($padding-size);
+    padding-left: getSizeValue($padding-size);
+  } @else if $direction == 'vertical' {
+    padding-top: getSizeValue($padding-size);
+    padding-bottom: getSizeValue($padding-size);
+  } @else if $direction == 'top' {
+    padding-top: getSizeValue($padding-size);
+  } @else if $direction == 'bottom' {
+    padding-bottom: getSizeValue($padding-size);
+  } @else {
+    padding: getSizeValue($padding-size);
+  }
+}

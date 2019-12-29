@@ -1,0 +1,30 @@
+@import "variables";
+article.hero {
+  height: 100vh;
+  width: 100vw;
+  background: url("assets/images/home-bg.png");
+  background-size: cover;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 6rem;
+  img.logo {
+    width: 7rem;
+    height: auto;
+  }
+  h1 {
+    color: $white;
+    text-align: center;
+    line-height: 1.2;
+  }
+  button {
+    font-size: 1.5rem;
+  }
+  img.bottom-shape {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+  }
+}
