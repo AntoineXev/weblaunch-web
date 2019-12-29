@@ -98,3 +98,6 @@ package-lock.json
 build.properties
 
 assets/images/thumbnails
+
+#firebase
+.firebaserc
