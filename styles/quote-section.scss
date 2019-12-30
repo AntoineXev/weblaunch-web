@@ -1,0 +1,65 @@
+@import "mixins/box-shadow";
+@import "variables";
+
+article.quote {
+  margin: 5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .quote-icon-wrapper {
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+    &::after, &::before {
+      content: "";
+      width: 15rem;
+      height: 4px;
+      margin-left: 3rem;
+      margin-right: 3rem;
+      border-radius: 50px;
+      background-color: $black;
+      @include basic-box-shadow;
+    }
+
+    img.quote-icon {
+      width: 5rem;
+    }
+  }
+
+  p.quote-text {
+    max-width: 70rem;
+    text-align: center;
+
+    &::after, &::before {
+      content: "‘’";
+    }
+  }
+
+  .quote-author {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+
+    img {
+      width: 10rem;
+    }
+    p.author {
+      margin-top: 0.5rem;
+      margin-bottom: 0;
+      font-weight: bold;
+    }
+    p.job {
+      margin-top: 0;
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

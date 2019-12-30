@@ -3,9 +3,12 @@
 @import "styles/typography";
 @import "styles/header";
 @import "styles/hero";
+@import "styles/quote-section";
+
 :root {
   font-size: 62.5%;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
 
   body {
     font-family: 'Poppins', Verdana, sans-serif;
@@ -13,6 +16,11 @@
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
+
+    article {
+      scroll-snap-align: start;
+    }
+
 
     *,
     &::before,
