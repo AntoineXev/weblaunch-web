@@ -1,4 +1,5 @@
 //Colors
+
 $primary: #484848;
 $accent: #00C58E;
 $title-base-color: #0D0D0D;
@@ -9,8 +10,22 @@ $white: #fff;
 
 $no-spacing: 0;
 $spacing-small: 0.4rem;
-$spacing-base: 0.7rem;
+$spacing-base: 1rem;
 $spacing-medium: 1.5rem;
-$spacing-large: 3rem;
+$spacing-large: 2rem;
 $spacing-x-large: 4rem;
 $spacing-xx-large: 8rem;
+
+//Containers
+
+$quote-container-width: 60rem;
+
+//Typo
+
+$h1-font-size: 5rem;
+$h3-font-size: 2rem;
+$base-font-size: 1.5rem;
+$header-font-size: 1.75rem;
+$small-line-height: .8;
+$base-line-height: 1;
+$large-line-height: 1.2;

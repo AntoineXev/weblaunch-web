@@ -1,5 +1,6 @@
 @import "variables";
 @import "mixins/box-shadow";
+@import "mixins/spacing";
 button.button, a.button {
   border-radius: 10rem;
   background-color: $accent;
@@ -7,7 +8,8 @@ button.button, a.button {
   font-family: "Poppins";
   border: none;
   font-weight: 700;
-  padding: 1rem 3rem;
+  @include padding-spacing(base, vertical);
+  @include padding-spacing(large, horizontal);
   text-transform: uppercase;
   transition: .2s ease-in-out;
   @include basic-box-shadow();

@@ -1,4 +1,5 @@
 @import "variables";
+@import "mixins/spacing";
 header.header {
   display: flex;
   justify-content: space-between;
@@ -7,7 +8,8 @@ header.header {
   top: 0;
   left: 0;
   right: 0;
-  padding: 0.5rem 1rem;
+  @include padding-spacing(base, vertical);
+  @include padding-spacing(medium, horizontal);
   z-index: 100;
   .logo-wrapper {
     img {
@@ -25,9 +27,11 @@ header.header {
       li, span{
         text-transform: uppercase;
         font-weight: bold;
-        font-size: 1.75rem;
+        font-size: $header-font-size;
         color: $white;
-        padding: 0.2rem 1rem;
+        @include padding-spacing(base, horizontal);
+        @include padding-spacing(small, vertical);
+
         cursor: pointer;
         a {
           &:hover {
