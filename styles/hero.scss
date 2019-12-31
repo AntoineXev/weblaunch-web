@@ -17,10 +17,9 @@ article.hero {
   h1 {
     color: $white;
     text-align: center;
-    line-height: 1.2;
   }
-  button {
-    font-size: 1.5rem;
+  a.button {
+    font-size: $h3-font-size;
   }
   img.bottom-shape {
     position: absolute;

@@ -2,10 +2,11 @@
 @import "variables";
 
 h1 {
-  font-size: 4rem;
+  font-size: $h1-font-size;
   text-transform: uppercase;
   font-family: "Hind Siliguri";
   color: $title-base-color;
+  line-height: $large-line-height;
 }
 
 a {
@@ -13,4 +14,8 @@ a {
   :hover {
     color: $accent;
   }
+}
+
+b {
+  font-weight: bold;
 }
