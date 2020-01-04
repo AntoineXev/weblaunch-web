@@ -10,6 +10,7 @@ button.button, a.button {
   font-weight: 700;
   @include padding-spacing(base, vertical);
   @include padding-spacing(large, horizontal);
+
   text-transform: uppercase;
   transition: .2s ease-in-out;
   @include basic-box-shadow();
