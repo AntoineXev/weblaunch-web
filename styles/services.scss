@@ -1,0 +1,66 @@
+@import "mixins/spacing";
+@import "variables";
+
+article.services {
+  section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    &.left-side {
+      div.text-content {
+        @include padding-spacing(none, left);
+        @include padding-spacing(large, right);
+
+        h2 {
+          text-align: right;
+
+          &::after {
+            left: unset;
+            right: 0;
+          }
+        }
+
+        p {
+          text-align: right;
+        }
+      }
+      div.img-container {
+        img {
+          margin-left: -20%;
+        }
+      }
+    }
+    div {
+      max-width: 50%;
+      &.text-content {
+        @include padding-spacing(large, left);
+        h2 {
+          position: relative;
+          @include padding-spacing(base, bottom);
+          margin: 0;
+
+          &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 20rem;
+            border-radius: 5px;
+            height: 4px;
+            background-color: $accent;
+          }
+        }
+      }
+      &.img-container {
+        width: 100%;
+
+        img {
+          width: 120%;
+          height: auto;
+        }
+      }
+    }
+  }
+}

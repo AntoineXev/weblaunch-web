@@ -32,7 +32,14 @@ button.button, a.button {
     > {
       color: $accent;
     }
-
+    &:hover {
+      background-color: $accent;
+      color: #fff;
+      border: 3px solid $accent;
+      >, span {
+        color: $white;
+      }
+    }
     &.white {
       border: 3px solid $white;
       color: $white;

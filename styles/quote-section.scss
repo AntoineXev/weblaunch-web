@@ -3,7 +3,6 @@
 @import "variables";
 
 article.quote {
-  @include margin-spacing(large, vertical);
   display: flex;
   align-items: center;
   justify-content: center;

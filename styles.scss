@@ -4,7 +4,7 @@
 @import "styles/header";
 @import "styles/hero";
 @import "styles/quote-section";
-
+@import "styles/services";
 :root {
   font-size: 62.5%;
   scroll-behavior: smooth;
@@ -19,6 +19,7 @@
 
     article {
       scroll-snap-align: start;
+      @include padding-spacing(xlarge, top);
     }
 
 

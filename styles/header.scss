@@ -1,5 +1,7 @@
 @import "variables";
 @import "mixins/spacing";
+@import "mixins/box-shadow";
+
 header.header {
   display: flex;
   justify-content: space-between;
@@ -8,15 +10,54 @@ header.header {
   top: 0;
   left: 0;
   right: 0;
-  @include padding-spacing(base, vertical);
+  @include padding-spacing(small, vertical);
   @include padding-spacing(medium, horizontal);
   z-index: 100;
-  .logo-wrapper {
-    img {
-      height: max-content;
-      width:auto;
+  transition: .2s ease-in-out;
+  background-color: rgba($white, 0);
+
+  &.scrolled {
+    background-color: rgba($white, 1);
+    @include basic-box-shadow();
+
+    nav {
+      ul {
+        li {
+          color: $accent;
+
+          a {
+            color: $title-base-color;
+          }
+        }
+
+        button {
+          span {
+            color: $accent;
+          }
+
+          &:hover {
+            span {
+              color: $white;
+            }
+          }
+        }
+
+      }
     }
   }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      @include padding-spacing(small, vertical);
+      height: max-content;
+      width: auto;
+    }
+  }
+
   nav {
     ul {
       display: flex;
@@ -24,19 +65,22 @@ header.header {
       justify-content: center;
       align-items: center;
       margin: 0;
-      li, span{
+
+      li, span {
         text-transform: uppercase;
         font-weight: bold;
         font-size: $header-font-size;
         color: $white;
         @include padding-spacing(base, horizontal);
-        @include padding-spacing(small, vertical);
+        //@include padding-spacing(small, vertical);
 
         cursor: pointer;
+
         a {
           &:hover {
             color: $accent;
           }
+
           color: $white;
         }
       }

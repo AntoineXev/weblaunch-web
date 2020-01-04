@@ -8,7 +8,12 @@ h1 {
   color: $title-base-color;
   line-height: $large-line-height;
 }
-
+h2 {
+  font-size: $h2-font-size;
+  font-family: "Hind Siliguri";
+  color: $title-base-color;
+  line-height: $large-line-height;
+}
 a {
   color: $primary;
   :hover {
