@@ -42,9 +42,22 @@ article.services {
           }
         }
       }
-
+      &.right-side {
+        div {
+          &.text-content {
+            h2 {
+              text-align: left;
+            }
+            p {
+              text-align: left;
+            }
+          }
+        }
+      }
       div {
         max-width: 50%;
+        @include padding-spacing(no, bottom);
+
         &.text-content {
           @include padding-spacing(large, left);
           h2 {
@@ -65,7 +78,9 @@ article.services {
     }
 
     div {
+      @include padding-spacing(large, bottom);
       &.text-content {
+
         h2 {
           position: relative;
           margin: 0;
