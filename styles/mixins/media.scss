@@ -1,0 +1,49 @@
+$screen-limit-xsm: 480px;
+$screen-limit-sm: 600px;
+$screen-limit-sm-large: 760px;
+$screen-limit-md: 961px;
+$screen-limit-lg: 1080px;
+$screen-limit-xl: 1440px;
+
+@mixin apply-to($media) {
+  @if $media == xsm {
+    @media only screen and (min-width: #{$screen-limit-xsm}) {
+      @content;
+    }
+  } @else if $media == sm {
+    @media only screen and (min-width: #{$screen-limit-sm}) {
+      @content;
+    }
+  } @else if $media == sm-large {
+    @media only screen and (min-width: #{$screen-limit-sm-large}) {
+      @content;
+    }
+  } @else if $media == md {
+    @media only screen and (min-width: #{$screen-limit-md}) {
+      @content;
+    }
+  } @else if $media == lg {
+    @media only screen and (min-width: #{$screen-limit-lg}) {
+      @content;
+    }
+  } @else if $media == xl {
+    @media only screen and (min-width: #{$screen-limit-xl}) {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xl";
+  }
+}
+
+.only-desktop {
+  display: none;
+  @include apply-to(lg) {
+    display: inherit;
+  }
+}
+
+.only-mobile {
+  @include apply-to(lg) {
+    display: none;
+  }
+}

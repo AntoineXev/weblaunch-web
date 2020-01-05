@@ -8,9 +8,17 @@
 <body>
 <header id="header" class="header">
     <div class="logo-wrapper">
-        <img src="assets/icons/weblaunch.svg">
+        <img class="only-desktop" src="assets/icons/weblaunch.svg">
+        <img class="only-mobile" src="assets/icons/logo.svg">
     </div>
-    <nav>
+    <button class="button outline white only-mobile" id="mobile-button">
+        <span>Recontrer mon expert</span>
+    </button>
+    <button class="burger-button only-mobile" type="button">
+        <span></span>
+        <span></span>
+    </button>
+    <nav class="only-desktop">
         <ul>
             <li>
                 <a href="#services">Services</a>
@@ -49,7 +57,7 @@
         </div>
     </article>
     <article class="services" id="services">
-        <section>
+        <section class="right-side">
             <div class="text-content">
             <h2>Une veritable expertise technique</h2>
             <p>Du design à l’implémentation, nos experts dans les différents domaines vous accompagnent durant toute la vie de votre site.</p>
@@ -59,15 +67,15 @@
             </div>
         </section>
         <section class="left-side">
-            <div class="img-container">
-                <img src="assets/images/best-guidance.jpg">
-            </div>
             <div class="text-content">
                 <h2>Un accompagnement sans égal</h2>
                 <p>Du choix du design au lancement et différentes mises à jour de votre site, nous restons à vos cotés afin de générer un maximum de ventes.</p>
             </div>
+            <div class="img-container">
+                <img src="assets/images/best-guidance.jpg">
+            </div>
         </section>
-        <section>
+        <section class="right-side">
             <div class="text-content">
                 <h2>Vendez plus, plus vite</h2>
                 <p>Tous nos sites possèdent un placement préférentiel dans les moteurs de recherche, et une intégration direct avec les différents charnels de publicité web afin de maximiser vos vente en un temps record.</p>

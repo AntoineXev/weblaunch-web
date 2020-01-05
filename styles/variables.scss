@@ -22,11 +22,20 @@ $quote-container-width: 60rem;
 
 //Typo
 
-$h1-font-size: 5rem;
+$h1-font-size: (
+        mobile: 6rem,
+        desktop: 5rem
+);;
 $h2-font-size: 3.5rem;
-$h3-font-size: 2.5rem;
+$h3-font-size: (
+        mobile: 5rem,
+        desktop: 2.5rem
+);
 $base-font-size: 2rem;
-$header-font-size: 1.75rem;
+$header-font-size: (
+        mobile: 3rem,
+        desktop: 1.75rem
+);
 $small-line-height: .8;
 $base-line-height: 1;
 $large-line-height: 1.2;

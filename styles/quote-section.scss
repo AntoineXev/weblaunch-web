@@ -1,5 +1,6 @@
 @import "mixins/box-shadow";
 @import "mixins/spacing";
+@import "mixins/media";
 @import "variables";
 
 article.quote {
@@ -7,7 +8,10 @@ article.quote {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-
+  @include padding-spacing(large, horizontal);
+  @include apply-to(lg) {
+    @include padding-spacing(no, horizontal);
+  }
   .quote-icon-wrapper {
     display: flex;
     position: relative;
@@ -31,7 +35,9 @@ article.quote {
   }
 
   p.quote-text {
-    max-width: $quote-container-width;
+    @include apply-to(lg) {
+      max-width: $quote-container-width;
+    }
     text-align: center;
 
     &::after, &::before {

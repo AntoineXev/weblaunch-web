@@ -1,8 +1,12 @@
 @import url('https://fonts.googleapis.com/css?family=Hind+Siliguri:600,700|Poppins:400,700&display=swap');
 @import "variables";
+@import "mixins/media";
 
 h1 {
-  font-size: $h1-font-size;
+  font-size: map-get($h1-font-size, mobile);
+  @include apply-to(lg) {
+    font-size: map-get($h1-font-size, desktop);
+  }
   text-transform: uppercase;
   font-family: "Hind Siliguri";
   color: $title-base-color;

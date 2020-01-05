@@ -1,63 +1,116 @@
 @import "mixins/spacing";
+@import "mixins/media";
 @import "variables";
 
 article.services {
   section {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 100%;
     overflow: hidden;
-    &.left-side {
-      div.text-content {
-        @include padding-spacing(none, left);
-        @include padding-spacing(large, right);
+    @include padding-spacing(xlarge, horizontal);
+    @include apply-to(lg) {
+      flex-direction: row;
+      @include padding-spacing(no, horizontal);
 
-        h2 {
-          text-align: right;
+      &.left-side {
+        div.text-content {
 
-          &::after {
-            left: unset;
-            right: 0;
+          order: 2;
+          @include padding-spacing(none, left);
+          @include padding-spacing(large, right);
+
+          h2 {
+            text-align: right;
+
+            &::after {
+              left: unset;
+              right: 0;
+            }
+          }
+
+          p {
+            text-align: right;
           }
         }
-
-        p {
-          text-align: right;
+        div.img-container {
+          order: 1;
+          img {
+            margin-left: -20%;
+          }
         }
       }
-      div.img-container {
-        img {
-          margin-left: -20%;
+      &.right-side {
+        div {
+          &.text-content {
+            h2 {
+              text-align: left;
+            }
+            p {
+              text-align: left;
+            }
+          }
+        }
+      }
+      div {
+        max-width: 50%;
+        @include padding-spacing(no, bottom);
+
+        &.text-content {
+          @include padding-spacing(large, left);
+          h2 {
+            text-align: left;
+            @include padding-spacing(base, bottom);
+          }
+          p {
+            text-align: left;
+          }
+        }
+        &.img-container {
+          img {
+            width: 120%;
+            height: auto;
+          }
         }
       }
     }
+
     div {
-      max-width: 50%;
+      @include padding-spacing(large, bottom);
       &.text-content {
-        @include padding-spacing(large, left);
+
         h2 {
           position: relative;
-          @include padding-spacing(base, bottom);
           margin: 0;
-
+          text-align: center;
           &::after {
+            @include apply-to(lg) {
+              margin: 0;
+              bottom: 0;
+            }
             content: "";
             position: absolute;
             left: 0;
-            bottom: 0;
+            right:0;
+            margin: auto;
+            bottom: -10px;
             width: 20rem;
             border-radius: 5px;
             height: 4px;
             background-color: $accent;
           }
         }
+        p {
+          text-align: center;
+        }
       }
       &.img-container {
         width: 100%;
 
         img {
-          width: 120%;
+          width: 100%;
           height: auto;
         }
       }
