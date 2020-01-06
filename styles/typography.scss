@@ -6,18 +6,31 @@ h1 {
   font-size: map-get($h1-font-size, mobile);
   @include apply-to(lg) {
     font-size: map-get($h1-font-size, desktop);
-  }
+  };
   text-transform: uppercase;
   font-family: "Hind Siliguri";
   color: $title-base-color;
   line-height: $large-line-height;
 }
 h2 {
-  font-size: $h2-font-size;
+  font-size: map-get($h2-font-size, mobile);
+  @include apply-to(lg) {
+    font-size: map-get($h2-font-size, desktop);
+  };
   font-family: "Hind Siliguri";
   color: $title-base-color;
   line-height: $large-line-height;
 }
+
+h3 {
+  font-size: map-get($h3-font-size, mobile);
+  @include apply-to(lg) {
+    font-size: map-get($h3-font-size, desktop);
+  }  font-family: "Hind Siliguri";
+  color: $title-base-color;
+  line-height: $large-line-height;
+}
+
 a {
   color: $primary;
   :hover {

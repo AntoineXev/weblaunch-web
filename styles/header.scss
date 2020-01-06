@@ -54,22 +54,21 @@ header.header {
     }
   }
   .burger-button {
+    background: transparent;
+    border: none;
     position: relative;
     width: 8rem;
     span {
       width: 90%;
       height: 1rem;
       border-radius: 1rem;
-      /*left: calc(50% - 12px);*/
       display: block;
-      /*height: 1px;*/
       position: absolute;
       transform-origin: center;
       transition-duration: 86ms;
       transition-property: background-color,opacity,transform;
       transition-timing-function: ease-out;
       top: calc(50% - 1rem);
-      //left: calc(50% - 28px);
       background-color: $white;
       &:first-child {
         top: calc(50% - 1.1rem);

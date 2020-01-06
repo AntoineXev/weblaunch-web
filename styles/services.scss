@@ -78,7 +78,7 @@ article.services {
     }
 
     div {
-      @include padding-spacing(large, bottom);
+      @include padding-spacing('large', 'bottom');
       &.text-content {
 
         h2 {

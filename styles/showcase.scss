@@ -1,0 +1,61 @@
+@import "mixins/box-shadow";
+
+article.showcase {
+  @include apply-to(lg) {
+    @include margin-spacing(large, horizontal);
+  }
+  h2 {
+    text-align: center;
+    position: relative;
+    margin: 0;
+    @include margin-spacing(large, bottom);
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+      bottom: -10px;
+      width: 20rem;
+      border-radius: 5px;
+      height: 4px;
+      background-color: $accent;
+    }
+  }
+
+  .showcase-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  @include apply-to(lg) {
+    flex-direction: row;
+
+  }
+    section {
+      position: relative;
+      width: -webkit-fill-available;
+      padding-top: 50%;
+      @include margin-spacing(large, vertical);
+      @include margin-spacing(large, horizontal);
+      @include apply-to(lg) {
+        padding-top: 22%;
+        @include margin-spacing(medium, vertical);
+        @include margin-spacing(medium, all);
+      }
+      .card {
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        border-radius: 20px;
+        @include apply-to(lg) {
+          @include margin-spacing(no, horizontal);
+        }
+        @include margin-spacing(xlarge, horizontal);
+        box-shadow: 0px 3px 12px #00000033;
+      }
+    }
+  }
+}

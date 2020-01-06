@@ -5,14 +5,20 @@
 @import "styles/hero";
 @import "styles/quote-section";
 @import "styles/services";
-
+@import "styles/showcase";
+@import "styles/meeting-recap";
+@import "styles/mixins/spacing";
+@import "styles/footer";
 :root {
   font-size: 62.5%;
   scroll-behavior: smooth;
 
   body {
     font-family: 'Poppins', Verdana, sans-serif;
-    font-size: $base-font-size;
+    font-size: map-get($base-font-size, mobile);
+    @include apply-to(lg) {
+      font-size: map-get($base-font-size, desktop);
+    }
     margin: 0;
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
@@ -20,7 +26,6 @@
     article {
       @include padding-spacing(xlarge, top);
     }
-
 
     *,
     &::before,

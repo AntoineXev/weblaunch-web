@@ -25,13 +25,19 @@ $quote-container-width: 60rem;
 $h1-font-size: (
         mobile: 6rem,
         desktop: 5rem
+);
+$h2-font-size: (
+        mobile: 6rem,
+        desktop: 3.5rem
 );;
-$h2-font-size: 3.5rem;
 $h3-font-size: (
         mobile: 5rem,
         desktop: 2.5rem
 );
-$base-font-size: 2rem;
+$base-font-size:(
+        mobile: 3.5rem,
+        desktop: 2rem
+);
 $header-font-size: (
         mobile: 3rem,
         desktop: 1.75rem
