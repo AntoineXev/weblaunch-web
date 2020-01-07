@@ -9,13 +9,31 @@ button.button, a.button {
   cursor: pointer;
   @include padding-spacing(base, vertical);
   @include padding-spacing(large, horizontal);
-
+  position: relative;
   text-transform: uppercase;
   transition: .2s ease-in-out;
   @include basic-box-shadow();
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top:0;
+    width: 100%;
+    padding-top: 100%;
+    background-color: $dark-accent;
+    transition: .2s ease-in-out;
+    transform: scale(0.001) translateY(-45%);
+    border-radius: 50rem;
+    z-index: -1;
+  }
   &:hover {
     transform: scale(1.01);
     @include hovered-box-shadow();
+    &::before {
+      transform: scale(1.2) translateY(-45%);
+    }
   }
   &:disabled {
     opacity: .4;
@@ -37,7 +55,9 @@ button.button, a.button {
     border: 3px solid $accent;
     color: $accent;
     background: transparent;
-
+    &::before {
+      background-color: $accent;
+    }
     > {
       color: $accent;
     }
