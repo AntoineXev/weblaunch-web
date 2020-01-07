@@ -64,15 +64,18 @@ article.services {
             text-align: left;
           }
         }
-        &.img-container {
-          img {
+      }
+    }
+    &.right-side {
+      div.img-container {
+        img {
+          @include apply-to(md) {
             width: 120%;
             height: auto;
           }
         }
       }
     }
-
     div {
       @include padding-spacing('large', 'bottom');
       &.text-content {
