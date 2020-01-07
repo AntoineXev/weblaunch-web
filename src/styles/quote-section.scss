@@ -1,15 +1,10 @@
-@import "mixins/box-shadow";
-@import "mixins/spacing";
-@import "mixins/media";
-@import "variables";
-
 article.quote {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  @include padding-spacing(large, horizontal);
-  @include apply-to(lg) {
+  @include padding-spacing(base, horizontal);
+  @include apply-to(md) {
     @include padding-spacing(no, horizontal);
   }
   .quote-icon-wrapper {
@@ -21,9 +16,15 @@ article.quote {
 
     &::after, &::before {
       content: "";
-      width: 15rem;
+      width: 10rem;
+      @include apply-to(md) {
+        width: 15rem;
+      }
       height: 4px;
-      @include margin-spacing(large, horizontal);
+      @include margin-spacing(medium, horizontal);
+      @include apply-to(md) {
+        @include margin-spacing(large, horizontal);
+      }
       border-radius: 50px;
       background-color: $black;
       @include basic-box-shadow;
@@ -35,7 +36,7 @@ article.quote {
   }
 
   p.quote-text {
-    @include apply-to(lg) {
+    @include apply-to(md) {
       max-width: $quote-container-width;
     }
     text-align: center;

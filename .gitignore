@@ -97,7 +97,7 @@ package-lock.json
 
 build.properties
 
-assets/images/thumbnails
+src/assets/images/thumbnails
 
 #firebase
 .firebaserc

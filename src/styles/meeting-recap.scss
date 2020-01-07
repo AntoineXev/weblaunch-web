@@ -31,20 +31,21 @@ article.meeting-recap {
   }
 
   h2 {
+    @include margin-spacing(base, horizontal);
     color: $white;
     text-align: center;
   }
 
   .meeting-card {
-    @include margin-spacing(large,horizontal);
+    @include margin-spacing(base, horizontal);
     @include basic-box-shadow();
-    @include margin-spacing(xlarge, bottom);
     border-radius: 20px;
     background-color: white;
-    @include padding-spacing(large,horizontal);
-    @include padding-spacing(medium,bottom);
-    @include apply-to(lg) {
+    @include margin-spacing(large, bottom);
+    @include padding-spacing(base,horizontal);
+    @include apply-to(md) {
       @include margin-spacing(large, bottom);
+      @include margin-spacing(xlarge, horizontal);
       @include padding-spacing(no,horizontal);
     }
     border: 10px solid rgba($accent, 0.3);
@@ -56,7 +57,7 @@ article.meeting-recap {
 
     .meeting-showcase {
 
-      @include apply-to(lg) {
+      @include apply-to(md) {
         flex-direction: row;
         align-items: center;
       }
@@ -68,7 +69,7 @@ article.meeting-recap {
       .meeting-item {
         display: flex;
         position: relative;
-        @include apply-to(lg) {
+        @include apply-to(md) {
           &:not(:last-child) {
             &::after {
               background-color: rgba($primary, 0.4);
@@ -85,7 +86,7 @@ article.meeting-recap {
           }
         }
 
-        @include apply-to(lg) {
+        @include apply-to(md) {
           @include padding-spacing(large, horizontal);
           width: 33%;
         }
@@ -100,10 +101,11 @@ article.meeting-recap {
       }
     }
   }
-  a.button {
+  button.button {
     @include margin-spacing(large,bottom);
-    span {
+    h3 {
       text-align: center;
+      color: white;
     }
   }
 }

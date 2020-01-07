@@ -1,9 +1,6 @@
-@import "variables";
-@import "mixins/media";
-@import "mixins/spacing";
 article.hero {
-  @include padding-spacing(large, horizontal);
-  @include apply-to(lg) {
+  @include padding-spacing(base, horizontal);
+  @include apply-to(md) {
     @include padding-spacing(no, horizontal);
   }
   height: 100vh;
@@ -17,29 +14,26 @@ article.hero {
   justify-content: center;
   padding-bottom: 6rem;
   img.logo {
-    @include apply-to(lg) {
-      width: 7rem;
-    }
-    width: 18rem;
+    width: 7rem;
     height: auto;
   }
   h1 {
     color: $white;
     text-align: center;
   }
-  a.button {
+  button.button {
+    border-radius: 50rem;
     font-size: map-get($h3-font-size, mobile);
-    @include padding-spacing(xlarge, horizontal);
-    @include padding-spacing(large, vertical);
-    @include apply-to(lg) {
-      @include padding-spacing(large, horizontal);
-      @include padding-spacing(medium, vertical);
+    @include padding-spacing(large, horizontal);
+    @include padding-spacing(medium, vertical);
+    @include apply-to(md) {
       font-size: map-get($h3-font-size, desktop);
     }
 
   }
   img.bottom-shape {
     position: absolute;
+    max-height: 20vh;
     bottom: 0;
     width: 100vw;
   }

@@ -2,6 +2,7 @@
 
 $primary: #484848;
 $accent: #00C58E;
+$dark-accent: #00af7e;
 $title-base-color: #0D0D0D;
 $black: #000;
 $white: #fff;
@@ -23,23 +24,23 @@ $quote-container-width: 60rem;
 //Typo
 
 $h1-font-size: (
-        mobile: 6rem,
+        mobile: 3rem,
         desktop: 5rem
 );
 $h2-font-size: (
-        mobile: 6rem,
+        mobile: 2.5rem,
         desktop: 3.5rem
 );;
 $h3-font-size: (
-        mobile: 5rem,
+        mobile: 2rem,
         desktop: 2.5rem
 );
 $base-font-size:(
-        mobile: 3.5rem,
+        mobile: 1.75rem,
         desktop: 2rem
 );
 $header-font-size: (
-        mobile: 3rem,
+        mobile: 1.5rem,
         desktop: 1.75rem
 );
 $small-line-height: .8;

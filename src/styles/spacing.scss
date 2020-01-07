@@ -1,5 +1,3 @@
-@import "/mixins/spacing";
-
 .no-margin {
   @include margin-spacing('no')
 }
