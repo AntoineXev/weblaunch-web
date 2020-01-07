@@ -1,5 +1,8 @@
 @import "styles/variables";
+@import "styles/mixins/index";
+
 @import "styles/buttons";
+@import "styles/spacing";
 @import "styles/typography";
 @import "styles/header";
 @import "styles/hero";
@@ -7,8 +10,9 @@
 @import "styles/services";
 @import "styles/showcase";
 @import "styles/meeting-recap";
-@import "styles/mixins/spacing";
 @import "styles/footer";
+@import "styles/popup";
+@import "styles/forms";
 :root {
   font-size: 62.5%;
   scroll-behavior: smooth;

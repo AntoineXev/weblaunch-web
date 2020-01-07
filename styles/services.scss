@@ -1,7 +1,3 @@
-@import "mixins/spacing";
-@import "mixins/media";
-@import "variables";
-
 article.services {
   section {
     display: flex;
@@ -10,8 +6,8 @@ article.services {
     align-items: center;
     max-width: 100%;
     overflow: hidden;
-    @include padding-spacing(xlarge, horizontal);
-    @include apply-to(lg) {
+    @include padding-spacing(base, horizontal);
+    @include apply-to(md) {
       flex-direction: row;
       @include padding-spacing(no, horizontal);
 
@@ -86,7 +82,7 @@ article.services {
           margin: 0;
           text-align: center;
           &::after {
-            @include apply-to(lg) {
+            @include apply-to(md) {
               margin: 0;
               bottom: 0;
             }

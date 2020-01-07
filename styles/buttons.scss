@@ -1,22 +1,27 @@
-@import "variables";
-@import "mixins/box-shadow";
-@import "mixins/spacing";
 button.button, a.button {
+
   border-radius: 10rem;
   background-color: $accent;
   color: #fff;
   font-family: "Poppins";
   border: none;
   font-weight: 700;
+  cursor: pointer;
   @include padding-spacing(base, vertical);
   @include padding-spacing(large, horizontal);
 
   text-transform: uppercase;
   transition: .2s ease-in-out;
   @include basic-box-shadow();
+
+  &:disabled {
+    opacity: .4;
+  }
+
   &.xs {
     padding: 0.25rem 0.75rem;
   }
+
   > {
     color: #fff;
     font-family: "Poppins";
@@ -33,18 +38,22 @@ button.button, a.button {
     > {
       color: $accent;
     }
+
     &:hover {
       background-color: $accent;
       color: #fff;
       border: 3px solid $accent;
+
       >, span {
         color: $white;
       }
     }
+
     &.white {
       border: 3px solid $white;
       color: $white;
       background: transparent;
+
       > {
         color: $white;
       }
@@ -53,6 +62,7 @@ button.button, a.button {
         background-color: $accent;
         color: #fff;
         border: 3px solid $accent;
+
         > {
           color: $white;
         }

@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Title</title>
     <link rel="stylesheet" href="./styles.scss"/>
 </head>
@@ -24,7 +25,7 @@
                 <a href="#services">Services</a>
             </li>
             <li>
-                <a href="#">Réalisations</a>
+                <a href="#showcase">Réalisations</a>
             </li>
             <li>
                 <button class="button outline white xs" id="header-button">
@@ -89,7 +90,7 @@
             </div>
         </section>
     </article>
-    <article class="showcase">
+    <article class="showcase" id="showcase">
         <h2>Nos Réalisation</h2>
         <div class="showcase-container">
             <section>
@@ -177,7 +178,7 @@
             <li class="footer-section button-container">
                 <ul>
                     <li class="" >
-                        <button class="button outline">
+                        <button class="button outline" onclick="popup.toggle()">
                             <span>Prendre mon rdv</span>
                         </button>
                     </li>
@@ -186,7 +187,81 @@
             </li>
         </ul>
     </footer>
+    <section class="pop-up-container hidden" id="popup-container" >
+    <div class="pop-up">
+        <button class="close-button" onclick="popup.toggle(meetingForm)">
+            <span>+</span>
+        </button>
+        <h2>Votre rendez-vous personalisé</h2>
+        <div class="stepper">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-subtitle">Votre Projet</div>
+            </div>
+            <div class="spacer"></div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-subtitle">Vous</div>
+            </div>
+            <div class="spacer"></div>
+            <div class="step">
+                <div class="step-number">V</div>
+            </div>
+        </div>
+        <div class="form-wrapper full-width">
+            <form class="form-section first-section" id="popup-form-first-section">
+                <div class="input-wrapper">
+                    <label for="sale-type-input">Que vendez vous ?*</label>
+                    <select class="input text" id="sale-type-input" name="sale-type-input" type="text" required>
+                        <option value="">Choisissez</option>
+                        <option value="dog">Bien</option>
+                        <option value="cat">Service</option>
+                    </select>
+                </div>
+                <div class="input-wrapper margin-medium-top">
+                    <label for="contact-input">Quel est le type de commerce ?*</label>
+                    <select required class="input text" name="sale-family" id="sale-family" type="text">
+                        <option value="">Choisissez</option>
+                        <option value="dog">Informatique/Electronique</option>
+                        <option value="cat">Destockage</option>
+                        <option value="hamster">Mode</option>
+                        <option value="parrot">Produits cosmetiques</option>
+                        <option value="spider">Produits comestibles</option>
+                        <option value="goldfish">Livres/Ebooks</option>
+                        <option value="goldfish">Livres/Ebooks</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <button class="button submit margin-auto-horizontal margin-large-vertical" type="submit">
+                    <span class="no-margin">Continuer ></span>
+                </button>
+            </form>
+            <form class="form-section second-section" id="popup-form-second-section">
+                <div class="input-wrapper margin-large-top">
+                    <label for="name-input">Qui êtes-vous ?*</label>
+                    <input class="input text" id="name-input" type="text" placeholder="Nom Prénom" name="name">
+                </div>
+                <div class="input-wrapper margin-medium-top">
+                    <label for="contact-input">Comment souhaitez vous être contacté par nos experts ?*</label>
+                    <select class="input text" id="contact-select" type="text" name="contact-method">
+                        <option value="">Choisissez</option>
+                        <option value="mail">Email</option>
+                        <option value="phone">Télephone</option>
+                        <option value="whatsapp">Whatsapp</option>
+                    </select>
+                    <input class="input text" id="contact-input" type="text" placeholder="Mail ou Numéro de Telephone *" name="contact-value" required>
+                </div>
+                <button class="button margin-auto-horizontal submit margin-large-vertical padding-large" type="submit" id="meeting-send-button">
+                    <span class="no-margin">Prendre rendez-vous</span></button>
+            </form>
+            <form class="form-section first-section" id="popup-form-third-section">
+                C'est fini :(
+            </form>
+        </div>
+    </div>
+    </section>
 </main>
 </body>
 <script src="main.ts"></script>
+
 </html>

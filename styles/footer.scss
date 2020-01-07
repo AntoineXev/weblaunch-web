@@ -5,7 +5,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @include apply-to(lg) {
+    @include apply-to(md) {
      flex-direction: row;
       justify-content: start;
     }
@@ -13,11 +13,11 @@ footer {
       display: flex;
       flex-direction: column;
       width: 100%;
-      @include apply-to(lg) {
+      @include apply-to(md) {
         width: 25%;
       }
       ul {
-        @include apply-to(lg) {
+        @include apply-to(md) {
           @include padding-spacing(small, bottom);
         }
         @include padding-spacing(large, bottom);
@@ -25,12 +25,12 @@ footer {
         li.title {
           font-weight: bold;
           max-height: map-get($base-font-size, mobile) * 1.5;
-          @include apply-to(lg) {
+          @include apply-to(md) {
             max-height: map-get($base-font-size, desktop) * 1.5;
           }
           img {
             max-height: map-get($base-font-size, mobile) * 1.5;
-            @include apply-to(lg) {
+            @include apply-to(md) {
               max-height: map-get($base-font-size, desktop) * 1.5;
             }
             height: 100%;
@@ -52,7 +52,7 @@ footer {
       button {
         span {
           font-size: map-get($header-font-size, mobile);
-          @include apply-to(lg) {
+          @include apply-to(md) {
             font-size: map-get($header-font-size, desktop);
           }
         }

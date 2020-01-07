@@ -1,0 +1,196 @@
+section.pop-up-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 199;
+  background-color: rgba($black, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &.hidden {
+    display: none;
+  };
+
+  .pop-up {
+    position: relative;
+    .close-button {
+      transform: rotate(45deg);
+      font-size: 5rem;
+      font-family: sans-serif;
+      font-weight: lighter;
+      position: absolute;
+      background: transparent;
+      border: none;
+      color: $white;
+      line-height: .7;
+      right: -5px;
+      top: 0;
+      @include apply-to(md) {
+        font-size: map-get($h1-font-size, desktop);
+      }
+    }
+    max-height: 95vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background-color: #10153A;
+    background: url("assets/images/home-bg.jpg");
+    width: 1080px;
+    @include padding-spacing(large,bottom);
+    @include padding-spacing(medium, top);
+    @include margin-spacing(base, horizontal);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include basic-box-shadow();
+    border-radius: 5px;
+    .stepper {
+      width: 90%;
+      @include apply-to(md) {
+        width: 60%;
+      }
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: $white;
+      @include apply-to(md) {
+        margin-bottom: map_get($h3-font-size, desktop) * 2;
+
+      }
+
+
+      .spacer {
+        height: 4px;
+        background-color: $white;
+        width: 15rem;
+        &.active {
+          background-color: $accent;
+        }
+      }
+      .step {
+        &.active {
+          color: $accent;
+          .step-number {
+            border-color: $accent ;
+          }
+        }
+        display: flex;
+        justify-content:  center;
+        align-items: center;
+        flex-direction: column;
+        position: relative;
+        .step-subtitle {
+          position: absolute;
+          text-align: center;
+          display: none;
+          @include apply-to(md) {
+            display: flex;
+            bottom: - $spacing-large - ((map_get($h3-font-size, desktop) + $spacing-large) / 2);
+            height: map_get($base-font-size, desktop);
+          }
+          bottom: - $spacing-x-large - ((map_get($h3-font-size, mobile) + $spacing-large) / 2);
+          height: map_get($base-font-size, mobile);
+          justify-content: center;
+          align-items: center;
+        }
+        .step-number {
+          border-radius: map_get($h3-font-size, mobile);
+          width: map_get($h3-font-size, mobile) + $spacing-x-large;
+          height: map_get($h3-font-size, mobile) + $spacing-x-large;
+          font-size: map_get($h3-font-size, mobile);
+          @include apply-to(md) {
+            width: map_get($h3-font-size, desktop) + $spacing-large;
+            height: map_get($h3-font-size, desktop) + $spacing-large;
+            font-size: map_get($h3-font-size, desktop);
+          }
+          display: flex;
+          justify-content:  center;
+          align-items: center;
+          text-align: center;
+          line-height: 1;
+          border: 4px solid;
+          border-color: $white;
+        }
+      }
+    }
+    h2 {
+      color: $white;
+      text-align: center;
+      @include padding-spacing(base,horizontal);
+
+    }
+
+    .form-wrapper {
+
+      @include margin-spacing(large, top);
+      display: flex;
+      flex-direction: row;
+      overflow: hidden;
+      @include apply-to(md) {
+        max-width: 480px;
+      }
+      form {
+
+        &:invalid>.submit {
+          pointer-events: none;
+          opacity: .4;
+        }
+        button {
+          &.onclick {
+            background: transparent;
+            width: 6.5rem - $spacing-medium;
+            height: 6.8rem  - $spacing-large;
+            border-color:$primary;
+            border-width:5px;
+            border-style: solid;
+            font-size:0;
+            border-left-color: $accent;
+            animation: rotating 2s 0.25s linear infinite;
+            padding-top: $spacing-large;
+            padding-bottom: $spacing-large;
+            padding-left: $spacing-medium;
+            padding-right: $spacing-medium;
+
+            @include apply-to(md) {
+              width: 6.5rem - $spacing-medium;
+              height: 6.8rem;
+            }
+          }
+        }
+        @include padding-spacing(base,horizontal);
+        transition: .2s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        min-width: 100%;
+        @include apply-to(md) {
+          min-width: 480px;
+        }
+
+        button {
+            @include padding-spacing(large, horizontal);
+            @include padding-spacing(medium, vertical);
+          span {
+            font-family: "Poppins";
+            font-size: map-get($h3-font-size, mobile);
+            @include apply-to(md) {
+              font-size: map-get($h3-font-size, desktop);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

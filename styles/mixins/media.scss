@@ -37,13 +37,13 @@ $screen-limit-xl: 1440px;
 
 .only-desktop {
   display: none;
-  @include apply-to(lg) {
+  @include apply-to(md) {
     display: inherit;
   }
 }
 
 .only-mobile {
-  @include apply-to(lg) {
+  @include apply-to(md) {
     display: none;
   }
 }
