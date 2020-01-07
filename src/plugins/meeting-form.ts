@@ -12,12 +12,12 @@ export class meetingForm {
     private secondFormData: FormData;
     constructor() {
         this.firstForm.addEventListener('submit', (e) => {
-            this.firstFormData = new FormData(e.target);
+            this.firstFormData = new FormData(e.target as HTMLFormElement);
             e.preventDefault();
             this.next();
         });
         this.secondForm.addEventListener('submit', (e) => {
-            this.secondFormData = new FormData(e.target);
+            this.secondFormData = new FormData(e.target as HTMLFormElement);
             e.preventDefault();
             this.send();
         })
@@ -49,7 +49,6 @@ export class meetingForm {
         this.toggleLoad();
         let formData = {};
         for (const key of this.firstFormData.keys()) {
-            console.log(key);
             formData[key] = this.firstFormData.get(key)
         }
         for (let key of this.secondFormData.keys()) {
