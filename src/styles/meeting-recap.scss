@@ -101,10 +101,11 @@ article.meeting-recap {
       }
     }
   }
-  a.button {
+  button.button {
     @include margin-spacing(large,bottom);
-    span {
+    h3 {
       text-align: center;
+      color: white;
     }
   }
 }

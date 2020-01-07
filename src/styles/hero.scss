@@ -21,7 +21,7 @@ article.hero {
     color: $white;
     text-align: center;
   }
-  a.button {
+  button.button {
     border-radius: 50rem;
     font-size: map-get($h3-font-size, mobile);
     @include padding-spacing(large, horizontal);
@@ -33,6 +33,7 @@ article.hero {
   }
   img.bottom-shape {
     position: absolute;
+    max-height: 20vh;
     bottom: 0;
     width: 100vw;
   }

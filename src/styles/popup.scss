@@ -132,7 +132,10 @@ section.pop-up-container {
         max-width: 480px;
       }
       form {
-
+        .icon-success {
+          width: 13rem;
+          height: 13rem;
+        }
         &:invalid>.submit {
           pointer-events: none;
           opacity: .4;
@@ -192,5 +195,52 @@ section.pop-up-container {
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+keyframes icon {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1)
+  }
+}
+
+@keyframes check {
+  0% {
+    width: 1.5em;
+    height: 1.5em;
+    border-width: 5px;
+  }
+  10% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.1;
+    background: rgba(0,0,0,0.2);
+    border-width: 15px;
+  }
+  12% {
+    width: 1.5em;
+    height: 1.5em;
+    opacity: 0.4;
+    background: rgba(0,0,0,0.1);
+    border-width: 0;
+  }
+  50% {
+    width: 2em;
+    height: 2em;
+    background: $accent;
+    border: 0;
+    opacity: 0.6;
+  }
+  100% {
+    width: 2em;
+    height: 2em;
+    background: $accent;
+    border: 0;
+    opacity: 1;
   }
 }

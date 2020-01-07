@@ -10,6 +10,7 @@ export class meetingForm {
     public loading = false;
     private firstFormData: FormData;
     private secondFormData: FormData;
+    private checkmark = document.getElementById('form-loader')
     constructor() {
         this.firstForm.addEventListener('submit', (e) => {
             this.firstFormData = new FormData(e.target as HTMLFormElement);
@@ -57,8 +58,9 @@ export class meetingForm {
         console.log(formData);
         setTimeout(function () {
             _local.next();
+            _local.toggleCheckmark();
             _local.toggleLoad();
-        }, 3000)
+        }, 1000)
     }
 
     private toggleLoad() {
@@ -71,5 +73,10 @@ export class meetingForm {
             this.sendButton.textContent = '';
             this.loading = true;
         }
+    }
+
+    private toggleCheckmark() {
+        this.checkmark.classList.add('load-complete');
+        this.checkmark.children[0].style.display = 'block'
     }
 }

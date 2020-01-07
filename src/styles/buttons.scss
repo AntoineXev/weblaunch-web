@@ -13,7 +13,10 @@ button.button, a.button {
   text-transform: uppercase;
   transition: .2s ease-in-out;
   @include basic-box-shadow();
-
+  &:hover {
+    transform: scale(1.01);
+    @include hovered-box-shadow();
+  }
   &:disabled {
     opacity: .4;
   }
@@ -43,7 +46,6 @@ button.button, a.button {
       background-color: $accent;
       color: #fff;
       border: 3px solid $accent;
-
       >, span {
         color: $white;
       }
