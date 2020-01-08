@@ -17,6 +17,7 @@
     "typescript": "^3.7.4"
   },
   "dependencies": {
+    "firebase": "^7.6.1",
     "parcel-plugin-static-files-copy": "^2.2.1",
     "plugins": "^0.4.2"
   }

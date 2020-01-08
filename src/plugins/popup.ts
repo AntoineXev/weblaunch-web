@@ -3,6 +3,7 @@ import {meetingForm} from "./meeting-form";
 export class popupClass {
     private container = document.getElementById('popup-container')
     public isOpen = false;
+    private analytics : any;
 
     constructor() {
         document.onkeypress = this.onEscPress;
@@ -15,10 +16,12 @@ export class popupClass {
         if (!this.isOpen) {
             this.container.classList.remove('hidden');
             this.isOpen = true;
+            this.analytics.logEvent('open_popup');
             return;
         } else {
             this.container.classList.add('hidden');
             this.isOpen = false;
+            this.analytics.logEvent('close_popup');
             return;
         }
     }
@@ -28,5 +31,9 @@ export class popupClass {
                 this.toggle()
             }
         }
+    }
+
+    setAnalytics(analytics: any) {
+        this.analytics = analytics;
     }
 }

@@ -11,7 +11,9 @@ export class meetingForm {
     public loading = false;
     private firstFormData: FormData;
     private secondFormData: FormData;
-    private checkmark = document.getElementById('form-loader')
+    private checkmark = document.getElementById('form-loader');
+    private analytics : any;
+
     constructor() {
         this.firstForm.addEventListener('submit', (e) => {
             this.firstFormData = new FormData(e.target as HTMLFormElement);
@@ -38,6 +40,9 @@ export class meetingForm {
         this.currentState = 1;
     }
     public next() {
+        if (this.currentState === 1) {
+            this.analytics.toggleEvent('form_step_2')
+        }
         for (let element of this.formSections) {
             element.style.transform = `translateX(-${this.currentState*100}%)`;
         }
@@ -47,6 +52,8 @@ export class meetingForm {
     }
 
     public send() {
+        this.analytics.toggleEvent('send_form');
+
         let _local = this;
         this.toggleLoad();
         let formData = {};
@@ -80,6 +87,11 @@ export class meetingForm {
 
     private toggleCheckmark() {
         this.checkmark.classList.add('load-complete');
-        this.checkmark.children[0].style.display = 'block'
+        this.checkmark.children[0].style.display = 'block';
+        this.analytics.toggleEvent('validate_form')
+    }
+
+    setAnalytics(analytics: any) {
+        this.analytics = analytics;
     }
 }
