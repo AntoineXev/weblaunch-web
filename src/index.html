@@ -141,133 +141,131 @@
             <h3 class="no-margin text-white">Prendre mon RDV</h3>
         </button>
     </article>
-    <footer>
-        <ul class="main-listing">
-            <li class="footer-section">
-                <ul>
-                    <li class="title">
-                        <img src="assets/icons/weblaunch.svg">
-                    </li>
-                </ul>
-            </li>
-            <li class="footer-section">
-                <ul>
-                    <li class="title">
-                        Réseaux
-                    </li>
-                    <li>
-                        <a href="#">Facebook</a>
-                    </li>
-                    <li>
-                        <a href="#">Linkedin</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="footer-section">
-                <ul>
-                    <li class="title">
-                        Contact
-                    </li>
-                    <li>
-                        <a href="#">Contact@weblaunch.fr</a>
-                    </li>
-                    <li>
-                        <a href="#">+33623771287</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="footer-section button-container">
-                <ul>
-                    <li class="">
-                        <button class="button outline" onclick="popup.toggle()">
-                            <span>Prendre mon rdv</span>
-                        </button>
-                    </li>
-
-                </ul>
-            </li>
-        </ul>
-    </footer>
-    <section class="pop-up-container hidden" id="popup-container">
-        <div class="pop-up">
-            <button class="close-button" onclick="popup.toggle(meetingForm)">
-<img src="assets/icons/close-icon.svg">
-
-            </button>
-            <h2>Votre rendez-vous personalisé</h2>
-            <div class="stepper">
-                <div class="step active">
-                    <div class="step-number">1</div>
-                    <div class="step-subtitle">Votre Projet</div>
-                </div>
-                <div class="spacer"></div>
-                <div class="step">
-                    <div class="step-number">2</div>
-                    <div class="step-subtitle">Vous</div>
-                </div>
-                <div class="spacer"></div>
-                <div class="step">
-                    <div class="step-number">V</div>
-                </div>
-            </div>
-            <div class="form-wrapper full-width">
-                <form class="form-section first-section" id="popup-form-first-section">
-                    <div class="input-wrapper">
-                        <label for="sale-type-input">Que vendez vous ?*</label>
-                        <select class="input text" id="sale-type-input" name="sale-type-input" type="text" required>
-                            <option value="">Choisissez</option>
-                            <option value="dog">Bien</option>
-                            <option value="cat">Service</option>
-                        </select>
-                    </div>
-                    <div class="input-wrapper margin-medium-top">
-                        <label for="contact-input">Quel est le type de commerce ?*</label>
-                        <select required class="input text" name="sale-family" id="sale-family" type="text">
-                            <option value="">Choisissez</option>
-                            <option value="dog">Informatique/Electronique</option>
-                            <option value="cat">Destockage</option>
-                            <option value="hamster">Mode</option>
-                            <option value="parrot">Produits cosmetiques</option>
-                            <option value="spider">Produits comestibles</option>
-                            <option value="goldfish">Livres/Ebooks</option>
-                            <option value="goldfish">Livres/Ebooks</option>
-                            <option value="autre">Autre</option>
-                        </select>
-                    </div>
-                    <button class="button submit margin-auto-horizontal" type="submit">
-                        <span class="no-margin">Continuer ></span>
+</main>
+<footer>
+    <ul class="main-listing">
+        <li class="footer-section">
+            <ul>
+                <li class="title">
+                    <img src="assets/icons/weblaunch.svg">
+                </li>
+            </ul>
+        </li>
+        <li class="footer-section">
+            <ul>
+                <li class="title">
+                    Réseaux
+                </li>
+                <li>
+                    <a href="#">Facebook</a>
+                </li>
+                <li>
+                    <a href="#">Linkedin</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-section">
+            <ul>
+                <li class="title">
+                    Contact
+                </li>
+                <li>
+                    <a href="mailto:">Contact@weblaunch.fr</a>
+                </li>
+                <li>
+                    <a href="#">+33623771287</a>
+                </li>
+            </ul>
+        </li>
+        <li class="footer-section button-container">
+            <ul>
+                <li class="">
+                    <button class="button outline" onclick="popup.toggle()">
+                        <span>Prendre mon rdv</span>
                     </button>
-                </form>
-                <form class="form-section second-section" id="popup-form-second-section">
-                    <div class="input-wrapper">
-                        <label for="name-input">Qui êtes-vous ?*</label>
-                        <input class="input text" id="name-input" type="text" placeholder="Nom Prénom" name="name">
-                    </div>
-                    <div class="input-wrapper">
-                        <label for="contact-input">Comment souhaitez vous être contacté par nos experts ?*</label>
-                        <select class="input text" id="contact-select" type="text" name="contact-method">
-                            <option value="">Choisissez</option>
-                            <option value="mail">Email</option>
-                            <option value="phone">Télephone</option>
-                            <option value="whatsapp">Whatsapp</option>
-                        </select>
-                        <input class="input text" id="contact-input" type="text"
-                               placeholder="Mail ou Numéro de Telephone *" name="contact-value" required>
-                    </div>
-                    <button class="button margin-auto-horizontal submit padding-large"
-                            type="submit" id="meeting-send-button">
-                        <span class="no-margin">Prendre rendez-vous</span></button>
-                </form>
-                <form class="form-section first-section" id="popup-form-third-section">
-                    <div class="circle-loader" id="form-loader">
-                        <div class="checkmark draw"></div>
-                    </div>
-                    <h2>Merci beaucoup ! Un de nos experts va vous contacter sous peu !</h2>
-                </form>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</footer>
+<section class="pop-up-container hidden" id="popup-container">
+    <div class="pop-up">
+        <button class="close-button" onclick="popup.toggle(meetingForm)">
+            <img src="assets/icons/close-icon.svg">
+        </button>
+        <h2>Votre rendez-vous personalisé</h2>
+        <div class="stepper">
+            <div class="step active">
+                <div class="step-number">1</div>
+                <div class="step-subtitle">Votre Projet</div>
+            </div>
+            <div class="spacer"></div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-subtitle">Vous</div>
+            </div>
+            <div class="spacer"></div>
+            <div class="step">
+                <div class="step-number">V</div>
             </div>
         </div>
-    </section>
-</main>
+        <div class="form-wrapper full-width">
+            <form class="form-section first-section" id="popup-form-first-section">
+                <div class="input-wrapper">
+                    <label for="sale-type-input">Que vendez vous ?*</label>
+                    <select class="input text" id="sale-type-input" name="sale-type-input" type="text" required>
+                        <option value="">Choisissez</option>
+                        <option value="dog">Bien</option>
+                        <option value="cat">Service</option>
+                    </select>
+                </div>
+                <div class="input-wrapper margin-medium-top">
+                    <label for="contact-input">Quel est le type de commerce ?*</label>
+                    <select required class="input text" name="sale-family" id="sale-family" type="text">
+                        <option value="">Choisissez</option>
+                        <option value="dog">Informatique/Electronique</option>
+                        <option value="cat">Destockage</option>
+                        <option value="hamster">Mode</option>
+                        <option value="parrot">Produits cosmetiques</option>
+                        <option value="spider">Produits comestibles</option>
+                        <option value="goldfish">Livres/Ebooks</option>
+                        <option value="goldfish">Livres/Ebooks</option>
+                        <option value="autre">Autre</option>
+                    </select>
+                </div>
+                <button class="button submit margin-auto-horizontal" type="submit">
+                    <span class="no-margin">Continuer ></span>
+                </button>
+            </form>
+            <form class="form-section second-section" id="popup-form-second-section">
+                <div class="input-wrapper">
+                    <label for="name-input">Qui êtes-vous ?*</label>
+                    <input class="input text" id="name-input" type="text" placeholder="Nom Prénom" name="name">
+                </div>
+                <div class="input-wrapper">
+                    <label for="contact-input">Comment souhaitez vous être contacté par nos experts ?*</label>
+                    <select class="input text" id="contact-select" type="text" name="contact-method">
+                        <option value="">Choisissez</option>
+                        <option value="mail">Email</option>
+                        <option value="phone">Télephone</option>
+                        <option value="whatsapp">Whatsapp</option>
+                    </select>
+                    <input class="input text" id="contact-input" type="text"
+                           placeholder="Mail ou Numéro de Telephone *" name="contact-value" required>
+                </div>
+                <button class="button margin-auto-horizontal submit padding-large"
+                        type="submit" id="meeting-send-button">
+                    <span class="no-margin">Prendre rendez-vous</span></button>
+            </form>
+            <form class="form-section first-section" id="popup-form-third-section">
+                <div class="circle-loader" id="form-loader">
+                    <div class="checkmark draw"></div>
+                </div>
+                <h2>Merci beaucoup ! Un de nos experts va vous contacter sous peu !</h2>
+            </form>
+        </div>
+    </div>
+</section>
 </body>
 <script src="main.ts"></script>
 

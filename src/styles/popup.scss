@@ -59,7 +59,7 @@ section.pop-up-container {
 
     .stepper {
       display: none;
-      @include apply-to(xsm) {
+      @include apply-to(sm) {
         display: flex;
       }
       width: 90%;
@@ -71,7 +71,6 @@ section.pop-up-container {
       color: $white;
       @include apply-to(md) {
         margin-bottom: map_get($h3-font-size, desktop) * 2;
-
       }
 
       .spacer {

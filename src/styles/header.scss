@@ -8,12 +8,8 @@ header.header {
   top: 0;
   left: 0;
   right: 0;
-  @include apply-to(md) {
+  @include apply-to(xsm) {
     @include padding-spacing(base, vertical);
-    @include padding-spacing(medium, horizontal);
-  }
-  @include apply-to(md) {
-    @include padding-spacing(small, vertical);
     @include padding-spacing(medium, horizontal);
   }
   @include padding-spacing(base, vertical);
