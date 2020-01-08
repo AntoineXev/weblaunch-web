@@ -213,15 +213,15 @@
             <form class="form-section first-section" id="popup-form-first-section">
                 <div class="input-wrapper">
                     <label for="sale-type-input">Que vendez vous ?*</label>
-                    <select class="input text" id="sale-type-input" name="sale-type-input" type="text" required>
+                    <select class="input text" id="sale-type-input" name="product_type" type="text" required>
                         <option value="">Choisissez</option>
-                        <option value="dog">Bien</option>
-                        <option value="cat">Service</option>
+                        <option value="good">Bien</option>
+                        <option value="service">Service</option>
                     </select>
                 </div>
                 <div class="input-wrapper margin-medium-top">
                     <label for="contact-input">Quel est le type de commerce ?*</label>
-                    <select required class="input text" name="sale-family" id="sale-family" type="text">
+                    <select required class="input text" name="product_category" id="sale-family" type="text">
                         <option value="">Choisissez</option>
                         <option value="dog">Informatique/Electronique</option>
                         <option value="cat">Destockage</option>
@@ -244,14 +244,14 @@
                 </div>
                 <div class="input-wrapper">
                     <label for="contact-input">Comment souhaitez vous être contacté par nos experts ?*</label>
-                    <select class="input text" id="contact-select" type="text" name="contact-method">
+                    <select class="input text" id="contact-select" type="text" name="contact_method">
                         <option value="">Choisissez</option>
                         <option value="mail">Email</option>
                         <option value="phone">Télephone</option>
                         <option value="whatsapp">Whatsapp</option>
                     </select>
                     <input class="input text" id="contact-input" type="text"
-                           placeholder="Mail ou Numéro de Telephone *" name="contact-value" required>
+                           placeholder="Mail ou Numéro de Telephone *" name="contact_value" required>
                 </div>
                 <button class="button margin-auto-horizontal submit padding-large"
                         type="submit" id="meeting-send-button">

@@ -1,4 +1,5 @@
 export class meetingForm {
+    private url = "https://us-central1-weblaunch-web.cloudfunctions.net/sendMeetingRequest";
     public currentState = 1;
     public firstForm = document.getElementById('popup-form-first-section');
     public secondForm = document.getElementById('popup-form-second-section');
@@ -55,12 +56,14 @@ export class meetingForm {
         for (let key of this.secondFormData.keys()) {
             formData[key] = this.secondFormData.get(key)
         }
-        console.log(formData);
-        setTimeout(function () {
+        let request = new XMLHttpRequest();
+        request.open('POST', this.url, true);
+        request.onload = function () {
             _local.next();
             _local.toggleCheckmark();
             _local.toggleLoad();
-        }, 1000)
+        };
+        request.send(JSON.stringify(formData));
     }
 
     private toggleLoad() {
