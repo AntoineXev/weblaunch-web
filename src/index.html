@@ -1,21 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Title</title>
+
+    <!-- Dublin Core -->
+    <meta name="DC.title" content="Weblaunch | Design et réalisation de site de e-commerce">
+    <meta name="DC.creator" content="Weblaunch">
+    <meta name="DC.subject" content="weblaunch, web, agence web, ecommerce, realisation sites web, entrepreneurs developpment site web, code, délais, réactivité" />
+    <meta name="DC.description" content="Votre site web de e-commerce réalisé en un mois par des experts de la vente en ligne. Nous possédons des experts dans les différents domaines du web, design, développement, SEO,.. Prenez rdv avec nos experts gratuitement." />
+    <meta name="DC.publisher" content="Weblaunch">
+    <meta name="DC.contributor" content="Weblaunch">
+    <meta name="DC.date" content="20/10/2019">
+    <meta name="DC.type" content="website">
+    <meta name="DC.format" content="website">
+    <meta name="DC.identifier" content="www.weblaunch.fr">
+    <meta name="DC.language" content="fr-FR">
+    <meta name="DC.coverage" content="World">
+    <meta name="DC.rights" content="&copy; Weblaunch">
+    <!-- END Dublin Core -->
+
+    <!-- Referencement -->
+    <meta name="description" content="Votre site web de e-commerce réalisé en un mois par des experts de la vente en ligne. Nous possédons des experts dans les différents domaines du web, design, développement, SEO,.. Prenez rdv avec nos experts gratuitement." />
+    <meta name="keywords" content="weblaunch, web, agence web, ecommerce, realisation sites web, entrepreneurs developpment site web, code, délais, réactivité" />
+    <meta name="author" content="WEBLAUNCH">
+    <meta name="robots" content="index">
+    <meta name="Indentifier-URL" content="www.weblaunch.fr">
+    <!-- END Referencement -->
+
+    <!-- Open Graph-->
+    <meta property="og:title" content="Weblaunch | Design et réalisation de site de e-commerce">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="www.weblaunch.com">
+    <meta property="og:image" content="https://weblaunch-6a084.firebaseapp.com/assets/images/logo.svg
+">
+    <meta property="og:site_name" content="Weblaunch | Design et réalisation de site de e-commerce">
+    <meta name="og:description" content="Votre site web de e-commerce réalisé en un mois par des experts de la vente en ligne. Nous possédons des experts dans les différents domaines du web, design, développement, SEO,.. Prenez rdv avec nos experts gratuitement." />
+    <link rel="shortcut icon" href="./assets/icons/logo.png" type="image/png">
+    <link rel="preconnect" href="https://embed.tawk.to" />
+    <link rel="canonical" href="https://weblaunch.fr" />
+    <title>Weblaunch | Votre e-commerce en 1 mois!</title>
     <link rel="stylesheet" href="styles.scss"/>
 </head>
 <body>
 <header id="header" class="header">
     <div class="logo-wrapper">
-        <img class="only-desktop" src="assets/icons/weblaunch.svg">
-        <img class="only-mobile" src="assets/icons/logo.svg">
+        <img class="only-desktop" src="assets/icons/weblaunch.svg" alt="logo">
+        <img class="only-mobile" src="assets/icons/logo.svg" alt="logo">
     </div>
     <button class="button outline white only-mobile" id="mobile-button" onclick="popup.toggle()">
         <span>Recontrer mon expert</span>
     </button>
-    <button class="burger-button only-mobile" type="button" onclick="toggleBurgerMenu()" id="burger-button">
+    <button class="burger-button only-mobile" type="button" aria-label="menu" onclick="toggleBurgerMenu()" id="burger-button">
         <span></span>
         <span></span>
     </button>
@@ -38,12 +74,12 @@
 </header>
 <main>
     <article class="hero">
-        <img class="logo" src="assets/icons/logo.svg"/>
+        <img class="logo" src="assets/icons/logo.svg" alt="Décollez avec weblaunch"/>
         <h1>Votre site e-commerce en 1 mois.<br/>Ou remboursé.</h1>
         <button class="button" onclick="popup.toggle()">
             <span>Contacter mon expert</span>
         </button>
-        <img class="bottom-shape" src="assets/images/hero-shape.png">
+        <img class="bottom-shape" src="assets/images/hero-shape.png" alt="Glissez vers le bas">
         <div class="scroll-downs">
             <div class="mousey">
                 <div class="scroller"></div>
@@ -52,7 +88,7 @@
     </article>
     <article class="quote">
         <div class="quote-icon-wrapper">
-            <img src="assets/icons/quote.svg" class="quote-icon">
+            <img src="assets/icons/quote.svg" class="quote-icon" alt="citation">
         </div>
         <p class="quote-text">Weblaunch nous a permis moins d’un mois, d’obtenir un site robuste, fiable et attractif.
             Leurs conseils et travaux nous ont permis de nous <b>concentrer à 100% sur notre marque</b>. Ce sont de
@@ -71,7 +107,7 @@
                     dont vous avez besoin.</p>
             </div>
             <div class="img-container">
-                <img src="assets/images/technical-expert.jpg">
+                <img src="assets/images/technical-expert.jpg" alt="Des developpeurs, ux/ui, experts SEO, marketeurs sont la pour votre projet">
             </div>
         </section>
         <section class="left-side">
@@ -81,7 +117,7 @@
                     afin de générer un maximum de ventes.</p>
             </div>
             <div class="img-container">
-                <img src="assets/images/best-guidance.jpg">
+                <img src="assets/images/best-guidance.jpg" alt="Des experts pour vous accompagner tout au long de votre aventure web">
             </div>
         </section>
         <section class="right-side">
@@ -93,7 +129,7 @@
                     record.</p>
             </div>
             <div class="img-container">
-                <img src="assets/images/sell-more.jpg">
+                <img src="assets/images/sell-more.jpg" alt="Des experts SEO pour vendre plus">
             </div>
         </section>
     </article>
@@ -102,22 +138,22 @@
         <div class="showcase-container">
             <section>
                 <div class="card">
-                    <a href="https://cop-room.com" target="_blank">
-                        <img src="assets/images/coproom.jpg"/>
+                    <a href="https://cop-room.com" target="_blank" aria-label="Coproom">
+                        <img src="assets/images/coproom.jpg" alt="Appercu du site Coproom"/>
                     </a>
                 </div>
             </section>
             <section>
                 <div class="card">
-                    <a href="https://slvs.fr" target="_blank">
-                        <img src="assets/images/slvs.jpg"/>
+                    <a href="https://slvs.fr" target="_blank" aria-label="SLVS">
+                        <img src="assets/images/slvs.jpg" alt="Appercu du site SLVS"/>
                     </a>
                 </div>
             </section>
             <section>
                 <div class="card">
-                    <a href="https://ikaoparis.com" target="_blank">
-                        <img src="assets/images/ikao.jpg"/>
+                    <a href="https://ikaoparis.com" target="_blank" aria-label="IKAO">
+                        <img src="assets/images/ikao.jpg" alt="Appercu du site IKAO"/>
                     </a>
                 </div>
             </section>
@@ -125,7 +161,7 @@
     </article>
     <article class="quote">
         <div class="quote-icon-wrapper">
-            <img src="assets/icons/quote.svg" class="quote-icon">
+            <img src="assets/icons/quote.svg" class="quote-icon" alt="citation">
         </div>
         <p class="quote-text">
             Nous avions besoin d’un <b>lancement rapide</b>, et d’une plateforme intégrant nos différents <b>canaux
@@ -133,7 +169,7 @@
             partenaires (expéditeurs, payements, emailing,...).
         </p>
         <div class="quote-author">
-            <img src="assets/images/fares.png"/>
+            <img src="assets/images/fares.png" alt="portrait de fares"/>
             <p class="author">Fares Kuzbari</p>
             <p class="job">Fondateur de <a href="https://cop-room.com" target="_blank">Coproom</a></p>
         </div>
@@ -144,15 +180,15 @@
             <h3>Ce que vous obtiendrez à la suite du rendez-vous</h3>
             <div class="meeting-showcase">
                 <div class="meeting-item">
-                    <img src="assets/icons/invoice-detail.svg">
+                    <img src="assets/icons/invoice-detail.svg" alt="votre devis detaillé">
                     <p>Un devis détaillé</p>
                 </div>
                 <div class="meeting-item">
-                    <img src="assets/icons/expert-meeting.svg">
+                    <img src="assets/icons/expert-meeting.svg" alt="notre expert">
                     <p>Un entretient avec nos experts</p>
                 </div>
                 <div class="meeting-item">
-                    <img src="assets/icons/design-proposal.svg">
+                    <img src="assets/icons/design-proposal.svg" alt="proposition de design">
                     <p>Une proposition de design</p>
                 </div>
             </div>
@@ -167,7 +203,7 @@
         <li class="footer-section">
             <ul>
                 <li class="title">
-                    <img src="assets/icons/weblaunch.svg">
+                    <img src="assets/icons/weblaunch.svg" alt="weblaunch">
                 </li>
             </ul>
         </li>
@@ -211,7 +247,7 @@
 <section class="pop-up-container hidden" id="popup-container">
     <div class="pop-up">
         <button class="close-button" onclick="popup.toggle(meetingForm)">
-            <img src="assets/icons/close-icon.svg">
+            <img src="assets/icons/close-icon.svg" alt="fermer">
         </button>
         <h2>Votre rendez-vous personalisé</h2>
         <div class="stepper">
@@ -240,16 +276,16 @@
                     </select>
                 </div>
                 <div class="input-wrapper margin-medium-top">
-                    <label for="contact-input">Quel est le type de commerce ?*</label>
+                    <label for="contact-input">Quel est votre catégorie de produit/service ?*</label>
                     <select required class="input text" name="product_category" id="sale-family" type="text">
                         <option value="">Choisissez</option>
-                        <option value="dog">Informatique/Electronique</option>
-                        <option value="cat">Destockage</option>
-                        <option value="hamster">Mode</option>
-                        <option value="parrot">Produits cosmetiques</option>
-                        <option value="spider">Produits comestibles</option>
-                        <option value="goldfish">Livres/Ebooks</option>
-                        <option value="goldfish">Livres/Ebooks</option>
+                        <option value="Informatique">Informatique/Electronique</option>
+                        <option value="Destockage">Destockage</option>
+                        <option value="Mode">Mode</option>
+                        <option value="Cosmetique">Produits cosmetiques</option>
+                        <option value="Comestibles">Produits comestibles</option>
+                        <option value="Livres">Livres/Ebooks</option>
+                        <option value="Digital">Contenu digital</option>
                         <option value="autre">Autre</option>
                     </select>
                 </div>
@@ -288,5 +324,16 @@
 </section>
 </body>
 <script src="main.ts"></script>
-
+<!--Start of Tawk.to Script-->
+<script type="text/javascript">
+    var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
+    (function () {
+        var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
+        s1.async = true;
+        s1.src = 'https://embed.tawk.to/5d9fa790fbec0f2fe3b929e6/default';
+        s1.charset = 'UTF-8';
+        s1.setAttribute('crossorigin', '*');
+        s0.parentNode.insertBefore(s1, s0);
+    })();
+</script>
 </html>
