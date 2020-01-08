@@ -114,8 +114,9 @@ header.header {
       height: 5rem;
     }
     @include apply-to(md) {
+      justify-content: start;
       height: max-content;
-      width: unset;
+      width: auto;
     }
     img {
       @include apply-to(md) {
