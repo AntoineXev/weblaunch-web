@@ -1,7 +1,7 @@
 button.button, a.button {
 
   border-radius: 10rem;
-  background-color: $accent;
+  background-color: $cta-color;
   color: #fff;
   font-family: "Poppins";
   border: none;
@@ -22,7 +22,7 @@ button.button, a.button {
     top:0;
     width: 100%;
     padding-top: 100%;
-    background-color: $dark-accent;
+    background-color: $cta-accent;
     transition: .2s ease-in-out;
     transform: scale(0.001) translateY(-45%);
     border-radius: 50rem;
@@ -52,20 +52,20 @@ button.button, a.button {
   }
 
   &.outline {
-    border: 3px solid $accent;
-    color: $accent;
+    border: 3px solid $cta-color;
+    color: $cta-color;
     background: transparent;
     &::before {
-      background-color: $accent;
+      background-color: $cta-color;
     }
     > {
-      color: $accent;
+      color: $cta-color;
     }
 
     &:hover {
-      background-color: $accent;
+      background-color: $cta-color;
       color: #fff;
-      border: 3px solid $accent;
+      border: 3px solid $cta-color;
       >, span {
         color: $white;
       }
@@ -81,9 +81,9 @@ button.button, a.button {
       }
 
       &:hover {
-        background-color: $accent;
+        background-color: $cta-color;
         color: #fff;
-        border: 3px solid $accent;
+        border: 3px solid $cta-color;
 
         > {
           color: $white;

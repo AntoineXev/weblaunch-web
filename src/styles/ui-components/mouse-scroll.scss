@@ -1,0 +1,41 @@
+.scroll-downs {
+  display: none;
+  @include apply-to(md) {
+    display: block;
+  }
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width :calc(3rem + 3px);
+  height: 5rem;
+  padding-bottom: 2rem;
+}
+.mousey {
+  display: none;
+  @include apply-to(md) {
+    display: block;
+  }
+  width: 3px;
+  padding: 5px 1rem;
+  height: calc(3rem + 5px);
+  border: 2px solid $title-base-color;
+  border-radius: 25px;
+  opacity: 0.75;
+}
+.scroller {
+  width: 3px;
+  height: 10px;
+  border-radius: 25%;
+  background-color: $title-base-color;
+  animation-name: scroll;
+  animation-duration: 2.2s;
+  animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+  animation-iteration-count: infinite;
+}
+@keyframes scroll {
+  0% { opacity: 0; transform: translateX(-1px)}
+  10% { transform:  translateX(-1px) translateY(0); opacity: 1; }
+  100% { transform:  translateX(-1px) translateY(10px); opacity: 0;}
+}

@@ -14,7 +14,7 @@ footer {
       flex-direction: column;
       width: 100%;
       @include apply-to(md) {
-        width: 25%;
+        width: 33%;
       }
       ul {
         @include apply-to(md) {
