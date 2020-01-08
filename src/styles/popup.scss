@@ -16,17 +16,17 @@ section.pop-up-container {
   .pop-up {
     position: relative;
     .close-button {
-      transform: rotate(45deg);
-      font-size: 5rem;
       font-family: sans-serif;
       font-weight: lighter;
       position: absolute;
       background: transparent;
       border: none;
       color: $white;
-      line-height: .7;
-      right: -5px;
+      height: 3.5rem;
+      width: 3.5rem;
       top: 0;
+      right: 0;
+      padding: 1rem;
       @include apply-to(md) {
         font-size: map-get($h1-font-size, desktop);
       }

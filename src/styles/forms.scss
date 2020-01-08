@@ -31,8 +31,8 @@
     }
   }
   select {
-    @include apply-to(md) {
-      height: map-get($h3-font-size, desktop) + 2 * $spacing-medium;
-    }
+    appearance: none;
+    -webkit-appearance: none;
+    height: map-get($h3-font-size, desktop) + 2 * $spacing-medium;
   }
 }

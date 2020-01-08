@@ -3,6 +3,8 @@ header.header {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+  flex-wrap: wrap;
+  overflow: hidden;
   top: 0;
   left: 0;
   right: 0;
@@ -25,6 +27,7 @@ header.header {
       }
     }
     nav {
+
       ul {
         li {
           color: $accent;
@@ -54,8 +57,10 @@ header.header {
     border: none;
     position: relative;
     width: 4rem;
+    height: 4rem;
+    padding: 0;
     span {
-      width: 90%;
+      width: 100%;
       height: .5rem;
       border-radius: 1rem;
       display: block;
@@ -73,6 +78,15 @@ header.header {
       &:nth-child(2) {
         top: calc(50% + .3rem);
       }
+    }
+    &.active span:first-child {
+      -webkit-transform: translateY(1rem) rotate(45deg);
+      transform: translateY(1rem) rotate(45deg);
+    }
+
+    &.active span:nth-child(2) {
+      -webkit-transform: translateY(-.3rem) rotate(-45deg);
+      transform: translateY(-.3rem) rotate(-45deg);
     }
   }
 
@@ -97,17 +111,47 @@ header.header {
     @include padding-spacing(small, vertical);
     @include padding-spacing(base, horizontal);
   }
+  .mobile-break {
+    flex-basis: 100%;
+    height: 0;
+    @include apply-to(md) {
+      flex-basis: unset;
+    }
+  }
   nav {
+    transition: .3s ease-in-out;
+    max-height: 0;
+    @include apply-to(md) {
+      max-height: unset;
+    }
+    &.opened {
+      max-height: 100vh;
+    }
     ul {
       display: flex;
       list-style: none;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
+      justify-content: start;
+      align-items: start;
+      padding: 0;
+      @include apply-to(md) {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+
       margin: 0;
+      li {
+        @include apply-to(md) {
+          @include padding-spacing(no, top);
+
+        }
+        @include padding-spacing(medium, top);
+      }
       li,span,button.button {
         text-transform: uppercase;
         font-weight: bold;
-        font-size: map-get($header-font-size, mobile);
+        font-size: map-get($header-font-size, mobile) * 1.3;
         @include apply-to(md) {
           font-size: map-get($header-font-size, desktop);
         }
