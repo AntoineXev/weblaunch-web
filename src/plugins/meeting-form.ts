@@ -41,7 +41,7 @@ export class meetingForm {
     }
     public next() {
         if (this.currentState === 1) {
-            this.analytics.toggleEvent('form_step_2')
+            this.analytics.logEvent('form_step_2')
         }
         for (let element of this.formSections) {
             element.style.transform = `translateX(-${this.currentState*100}%)`;
@@ -52,7 +52,7 @@ export class meetingForm {
     }
 
     public send() {
-        this.analytics.toggleEvent('send_form');
+        this.analytics.logEvent('send_form');
 
         let _local = this;
         this.toggleLoad();
@@ -88,7 +88,7 @@ export class meetingForm {
     private toggleCheckmark() {
         this.checkmark.classList.add('load-complete');
         this.checkmark.children[0].style.display = 'block';
-        this.analytics.toggleEvent('validate_form')
+        this.analytics.logEvent('validate_form')
     }
 
     setAnalytics(analytics: any) {

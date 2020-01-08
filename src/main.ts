@@ -19,7 +19,8 @@ window.toggleBurgerMenu = toggleBurgerMenu;
 function main() {
     firebase.initializeApp(firebaseConfig);
     const analytics = firebase.analytics();
-    window.popup.setAnalytics(analytics)
+    window.popup.setAnalytics(analytics);
+    window.meetingForm.setAnalytics(analytics);
     setHeaderScroll()
 }
 
