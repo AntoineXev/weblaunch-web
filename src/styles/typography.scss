@@ -6,7 +6,7 @@ h1 {
     font-size: map-get($h1-font-size, desktop);
   };
   text-transform: uppercase;
-  font-family: "Hind Siliguri";
+  font-family: "Hind Siliguri", Verdana, sans-serif;
   color: $title-base-color;
   line-height: $large-line-height;
 }
@@ -15,7 +15,7 @@ h2 {
   @include apply-to(md) {
     font-size: map-get($h2-font-size, desktop);
   };
-  font-family: "Hind Siliguri";
+  font-family: "Hind Siliguri", Verdana, sans-serif;
   color: $title-base-color;
   line-height: $large-line-height;
 }
@@ -24,7 +24,8 @@ h3 {
   font-size: map-get($h3-font-size, mobile);
   @include apply-to(md) {
     font-size: map-get($h3-font-size, desktop);
-  }  font-family: "Hind Siliguri";
+  }
+  font-family: "Hind Siliguri", Verdana, sans-serif;
   color: $title-base-color;
   line-height: $large-line-height;
 }
