@@ -9,13 +9,17 @@ section.pop-up-container {
   display: flex;
   justify-content: center;
   align-items: center;
+
   &.hidden {
     display: none;
-  };
+  }
+;
 
   .pop-up {
     position: relative;
+
     .close-button {
+      cursor: pointer;
       font-family: sans-serif;
       font-weight: lighter;
       position: absolute;
@@ -24,34 +28,44 @@ section.pop-up-container {
       color: $white;
       height: 3.5rem;
       width: 3.5rem;
+      @include apply-to(md) {
+        height: 4rem;
+        width: 4rem;
+        top: .5rem;
+        right: .5rem;      }
       top: 0;
       right: 0;
       padding: 1rem;
-      @include apply-to(md) {
-        font-size: map-get($h1-font-size, desktop);
-      }
     }
+
     max-height: 95vh;
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #10153A;
     background: url("assets/images/home-bg.jpg");
     width: 1080px;
-    @include padding-spacing(large,bottom);
+    @include padding-spacing(base, bottom);
     @include padding-spacing(medium, top);
     @include margin-spacing(base, horizontal);
+    @include apply-to(xsm) {
+      @include padding-spacing(large, bottom);
+    }
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     @include basic-box-shadow();
     border-radius: 5px;
+
     .stepper {
+      display: none;
+      @include apply-to(xsm) {
+        display: flex;
+      }
       width: 90%;
       @include apply-to(md) {
         width: 60%;
       }
-      display: flex;
       justify-content: center;
       align-items: center;
       color: $white;
@@ -60,27 +74,31 @@ section.pop-up-container {
 
       }
 
-
       .spacer {
         height: 4px;
         background-color: $white;
         width: 15rem;
+
         &.active {
           background-color: $accent;
         }
       }
+
       .step {
         &.active {
           color: $accent;
+
           .step-number {
-            border-color: $accent ;
+            border-color: $accent;
           }
         }
+
         display: flex;
-        justify-content:  center;
+        justify-content: center;
         align-items: center;
         flex-direction: column;
         position: relative;
+
         .step-subtitle {
           position: absolute;
           text-align: center;
@@ -95,18 +113,24 @@ section.pop-up-container {
           justify-content: center;
           align-items: center;
         }
+
         .step-number {
           border-radius: map_get($h3-font-size, mobile);
-          width: map_get($h3-font-size, mobile) + $spacing-x-large;
-          height: map_get($h3-font-size, mobile) + $spacing-x-large;
-          font-size: map_get($h3-font-size, mobile);
+          @include apply-to(xsm) {
+            width: map_get($h3-font-size, mobile) + $spacing-x-large;
+            height: map_get($h3-font-size, mobile) + $spacing-x-large;
+            font-size: map_get($h3-font-size, mobile);
+          }
+          width: (map_get($h3-font-size, mobile) + $spacing-x-large) *.7;
+          height: (map_get($h3-font-size, mobile) + $spacing-x-large) *.7;
+          font-size: map_get($h3-font-size, mobile) * .7;
           @include apply-to(md) {
             width: map_get($h3-font-size, desktop) + $spacing-large;
             height: map_get($h3-font-size, desktop) + $spacing-large;
             font-size: map_get($h3-font-size, desktop);
           }
           display: flex;
-          justify-content:  center;
+          justify-content: center;
           align-items: center;
           text-align: center;
           line-height: 1;
@@ -115,43 +139,55 @@ section.pop-up-container {
         }
       }
     }
+
     h2 {
       color: $white;
       text-align: center;
-      @include padding-spacing(base,horizontal);
-
+      @include margin-spacing(no, top);
+      @include padding-spacing(base, horizontal);
+      @include apply-to(xsm) {
+        @include margin-spacing(small, top);
+        @include margin-spacing(large, bottom);
+      }
     }
 
     .form-wrapper {
 
-      @include margin-spacing(large, top);
+      @include margin-spacing(base, top);
+      @include apply-to(xsm) {
+        @include margin-spacing(large, top);
+      }
       display: flex;
       flex-direction: row;
       overflow: hidden;
       @include apply-to(md) {
         max-width: 480px;
       }
+
       form {
         .icon-success {
           width: 13rem;
           height: 13rem;
         }
-        &:invalid>.submit {
+
+        &:invalid > .submit {
           pointer-events: none;
           opacity: .4;
         }
+
         button {
           &.onclick {
             &::before {
               content: none;
             }
+
             background: transparent;
             width: 6.5rem - $spacing-medium;
             height: 6.8rem  - $spacing-large;
-            border-color:$primary;
-            border-width:5px;
+            border-color: $primary;
+            border-width: 5px;
             border-style: solid;
-            font-size:0;
+            font-size: 0;
             border-left-color: $accent;
             animation: rotating 2s 0.25s linear infinite;
             padding-top: $spacing-large;
@@ -165,7 +201,8 @@ section.pop-up-container {
             }
           }
         }
-        @include padding-spacing(base,horizontal);
+
+        @include padding-spacing(base, horizontal);
         transition: .2s ease-in-out;
         display: flex;
         flex-direction: column;
@@ -177,8 +214,10 @@ section.pop-up-container {
         }
 
         button {
-            @include padding-spacing(large, horizontal);
-            @include padding-spacing(medium, vertical);
+          @include padding-spacing(large, horizontal);
+          @include padding-spacing(medium, vertical);
+          @include margin-spacing(medium, top);
+
           span {
             font-family: "Poppins";
             font-size: map-get($h3-font-size, mobile);
@@ -206,6 +245,7 @@ keyframes icon {
     opacity: 0;
     transform: scale(0.3);
   }
+
   to {
     opacity: 1;
     transform: scale(1)
@@ -222,14 +262,14 @@ keyframes icon {
     width: 1.5em;
     height: 1.5em;
     opacity: 0.1;
-    background: rgba(0,0,0,0.2);
+    background: rgba(0, 0, 0, 0.2);
     border-width: 15px;
   }
   12% {
     width: 1.5em;
     height: 1.5em;
     opacity: 0.4;
-    background: rgba(0,0,0,0.1);
+    background: rgba(0, 0, 0, 0.1);
     border-width: 0;
   }
   50% {

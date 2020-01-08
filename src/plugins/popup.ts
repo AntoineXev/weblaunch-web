@@ -4,7 +4,9 @@ export class popupClass {
     private container = document.getElementById('popup-container')
     public isOpen = false;
 
-    constructor() {}
+    constructor() {
+        document.onkeypress = this.onEscPress;
+    }
 
     toggle(form? :meetingForm) {
         if (form) {
@@ -20,5 +22,11 @@ export class popupClass {
             return;
         }
     }
-
+    onEscPress(evt: KeyboardEvent) {
+        if (evt.key === "Escape" || evt.key === "Esc") {
+            if (this.isOpen) {
+                this.toggle()
+            }
+        }
+    }
 }

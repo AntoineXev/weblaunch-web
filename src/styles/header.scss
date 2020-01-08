@@ -9,11 +9,15 @@ header.header {
   left: 0;
   right: 0;
   @include apply-to(md) {
+    @include padding-spacing(base, vertical);
+    @include padding-spacing(medium, horizontal);
+  }
+  @include apply-to(md) {
     @include padding-spacing(small, vertical);
     @include padding-spacing(medium, horizontal);
   }
   @include padding-spacing(base, vertical);
-  @include padding-spacing(medium, horizontal);
+  @include padding-spacing(base, horizontal);
   z-index: 100;
   transition: .2s ease-in-out;
   background-color: rgba($white, 0);
@@ -56,11 +60,16 @@ header.header {
     background: transparent;
     border: none;
     position: relative;
-    width: 4rem;
-    height: 4rem;
+    width: 3rem;
+    height: 3rem;
+    @include apply-to(xsm) {
+      width: 4rem;
+      height: 4rem;
+    }
+
     padding: 0;
     span {
-      width: 100%;
+      width: 80%;
       height: .5rem;
       border-radius: 1rem;
       display: block;
@@ -70,23 +79,31 @@ header.header {
       transition-property: background-color,opacity,transform;
       transition-timing-function: ease-out;
       top: calc(50% - .3rem);
+      right: 0;
       background-color: $white;
       &:first-child {
-        top: calc(50% - 1rem);
+        top: calc(50% - .8rem);
       }
 
       &:nth-child(2) {
-        top: calc(50% + .3rem);
+        @include apply-to(xsm) {
+          top: calc(50% + .3rem);
+        }
+        top: calc(50% + .2rem);
       }
     }
     &.active span:first-child {
-      -webkit-transform: translateY(1rem) rotate(45deg);
-      transform: translateY(1rem) rotate(45deg);
+      -webkit-transform: translateY(.8rem) rotate(45deg);
+      transform: translateY(.8rem) rotate(45deg);
     }
 
     &.active span:nth-child(2) {
-      -webkit-transform: translateY(-.3rem) rotate(-45deg);
-      transform: translateY(-.3rem) rotate(-45deg);
+      @include apply-to(xsm) {
+        -webkit-transform: translateY(-.3rem) rotate(-45deg);
+        transform: translateY(-.3rem) rotate(-45deg);
+      }
+      -webkit-transform: translateY(-.2rem) rotate(-45deg);
+      transform: translateY(-.2rem) rotate(-45deg);
     }
   }
 
@@ -94,9 +111,15 @@ header.header {
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 5rem;
+    width: 3rem;
+    height: 3rem;
+    @include apply-to(xsm) {
+      width: 5rem;
+      height: 5rem;
+    }
     @include apply-to(md) {
       height: max-content;
+      width: unset;
     }
     img {
       @include apply-to(md) {
