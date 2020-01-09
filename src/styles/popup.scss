@@ -4,7 +4,7 @@ section.pop-up-container {
   bottom: 0;
   left: 0;
   right: 0;
-  z-index: 199;
+  z-index: 9999999999;
   background-color: rgba($black, 0.7);
   display: flex;
   justify-content: center;
@@ -42,7 +42,7 @@ section.pop-up-container {
     overflow-y: auto;
     overflow-x: hidden;
     background-color: #10153A;
-    background: url("assets/images/home-bg.jpg");
+    background-image: url("assets/images/home-bg.jpg");
     width: 1080px;
     @include padding-spacing(base, bottom);
     @include padding-spacing(medium, top);

@@ -8,7 +8,9 @@ article.meeting-recap {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url("assets/images/home-bg.jpg");
+  background-image: url("assets/images/home-bg.jpg");
+  background-color: #10153A;
+
   &::before {
      content: "";
      top: -1px;

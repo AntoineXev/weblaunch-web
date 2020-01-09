@@ -5,7 +5,8 @@ article.hero {
   }
   height: 100vh;
   width: 100vw;
-  background: url("assets/images/home-bg.jpg");
+  background-image: url("assets/images/home-bg.jpg");
+  background-color: #10153A;
   background-size: cover;
   display: flex;
   position: relative;

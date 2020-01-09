@@ -3,7 +3,7 @@ import {popupClass} from './plugins/popup';
 import {meetingForm} from "./plugins/meeting-form";
 import * as firebase from "firebase/app";
 import 'firebase/analytics';
-
+import 'lazysizes';
 
 var firebaseConfig = {
     apiKey: "AIzaSyCq9ijM_Bk5BjyBI4Rl3kc6xeWHp52begM",
