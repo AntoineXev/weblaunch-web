@@ -9,6 +9,10 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
+    - name: Set JS env
+      env:
+        ENV_FILE_CONTENT: ${{ export const environment = { firebase_api_key : ${{ secrets.FIREBASE_TOKEN }} }; }}
+      - run: echo "$ENV_FILE_CONTENT" > env/env.ts
     - uses: actions/setup-node@master
       with:
         node-version: '10.13'

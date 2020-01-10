@@ -101,3 +101,5 @@ src/assets/images/thumbnails
 
 #firebase
 .firebaserc
+
+env/
