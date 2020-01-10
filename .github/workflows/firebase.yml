@@ -9,7 +9,7 @@ jobs:
 
     steps:
     - uses: actions/checkout@master
-    - run: sh setEnvironment.sh ${{ secrets.FIREBASE_API_KEY }
+    - run: sh setEnvironment.sh ${{ secrets.FIREBASE_API_KEY }}
     - uses: actions/setup-node@master
       with:
         node-version: '10.13'
